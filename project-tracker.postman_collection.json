@@ -1,0 +1,149 @@
+{
+  "info": {
+    "name": "Project Tracker Backend",
+    "_postman_id": "abcd1234-efgh-5678-ijkl-1234567890ab",
+    "description": "Postman collection for Project Tracker backend APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth - Signup",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"password\": \"123456\",\n  \"role\": \"student\"\n}"
+        },
+        "url": { "raw": "http://localhost:5000/api/auth/signup" }
+      }
+    },
+    {
+      "name": "Auth - Login",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"john@example.com\",\n  \"password\": \"123456\"\n}"
+        },
+        "url": { "raw": "http://localhost:5000/api/auth/login" }
+      }
+    },
+    {
+      "name": "Admin - Create User",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Student A\",\n  \"email\": \"studentA@example.com\",\n  \"password\": \"123456\",\n  \"role\": \"student\"\n}"
+        },
+        "url": { "raw": "http://localhost:5000/api/admin/create-user" }
+      }
+    },
+    {
+      "name": "Admin - Create Project",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"AI Project\",\n  \"description\": \"Research project\",\n  \"advisorIds\": [\"{{advisorId}}\"],\n  \"studentIds\": [\"{{studentId}}\"]\n}"
+        },
+        "url": { "raw": "http://localhost:5000/api/admin/create-project" }
+      }
+    },
+    {
+      "name": "Advisor - Create Project",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{advisorToken}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"ML Project\",\n  \"description\": \"Machine learning tasks\",\n  \"studentIds\": [\"{{studentId}}\"]\n}"
+        },
+        "url": { "raw": "http://localhost:5000/api/advisor/create-project" }
+      }
+    },
+    {
+      "name": "Advisor - Create Task",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{advisorToken}}" }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            { "key": "name", "value": "Task 1" },
+            { "key": "instructions", "value": "Follow these steps" },
+            { "key": "projectId", "value": "{{projectId}}" },
+            { "key": "file", "type": "file" }
+          ]
+        },
+        "url": { "raw": "http://localhost:5000/api/advisor/create-task" }
+      }
+    },
+    {
+      "name": "Student - Submit Task",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{studentToken}}" }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            { "key": "taskId", "value": "{{taskId}}" },
+            { "key": "file", "type": "file" }
+          ]
+        },
+        "url": { "raw": "http://localhost:5000/api/student/submit-task" }
+      }
+    },
+    {
+      "name": "Advisor - Evaluate Task",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{advisorToken}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"taskId\": \"{{taskId}}\",\n  \"studentId\": \"{{studentId}}\",\n  \"marks\": 85\n}"
+        },
+        "url": { "raw": "http://localhost:5000/api/advisor/evaluate-task" }
+      }
+    },
+    {
+      "name": "Chatbot - Ask",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"query\": \"how to submit task\"\n}" },
+        "url": { "raw": "http://localhost:5000/api/chatbot/ask" }
+      }
+    },
+    {
+      "name": "Discussion - Get Messages",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "url": { "raw": "http://localhost:5000/api/discussions/{{projectId}}" }
+      }
+    }
+  ]
+}
