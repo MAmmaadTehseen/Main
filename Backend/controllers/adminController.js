@@ -1,6 +1,7 @@
 const User = require("../models/User");
 const Project = require("../models/Project");
 const bcrypt = require("bcryptjs");
+const { sendWelcomeEmail } = require("../utils/email");
 
 // Create new user (advisor or student)
 exports.createUser = async (req, res) => {
@@ -16,6 +17,16 @@ exports.createUser = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const user = await User.create({ name, email, password: hashedPassword, role });
+
+    // Send welcome email with credentials
+    try {
+      await sendWelcomeEmail(email, name, password, role);
+      console.log(`Welcome email sent to: ${email}`);
+    } catch (emailError) {
+      console.error("Error sending welcome email:", emailError.message);
+      // Continue even if email fails - user is still created
+    }
+
     res.status(201).json({ message: "User created", user: { id: user._id, name, email, role } });
   } catch (err) {
     res.status(500).json({ message: err.message });
