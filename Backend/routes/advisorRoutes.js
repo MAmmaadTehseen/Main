@@ -1,18 +1,20 @@
 const express = require("express");
 const router = express.Router();
 const { authMiddleware, advisorOnly } = require("../middleware/authMiddleware");
-const upload = require("../middleware/upload");
+const { upload } = require("../middleware/upload");
 
 const {
   createProject,
   addStudentToProject,
   getAdvisorProjects,
   getAdvisorProjectTasks,
-    getTaskSubmissions,
+  getTaskSubmissions,
   gradeSubmission,
-    completeTask,
-      updateTask,
+  completeTask,
+  updateTask,
   deleteTask,
+  deleteProject,
+  getAllStudents,
 } = require("../controllers/advisorController");
 
 const {
@@ -26,6 +28,10 @@ router.post("/create-project", authMiddleware, advisorOnly, createProject);
 router.post("/add-student", authMiddleware, advisorOnly, addStudentToProject);
 router.get("/projects", authMiddleware, advisorOnly, getAdvisorProjects);
 router.get("/projects/:projectId/tasks", authMiddleware, advisorOnly, getAdvisorProjectTasks);
+router.delete("/projects/:projectId", authMiddleware, advisorOnly, deleteProject);
+
+// ----- Student Routes -----
+router.get("/students", authMiddleware, advisorOnly, getAllStudents);
 
 // // ----- Task Routes -----
 router.post("/create-task", authMiddleware, advisorOnly, upload.single("file"), createTask);

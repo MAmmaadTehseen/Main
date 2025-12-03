@@ -1,9 +1,34 @@
 const multer = require("multer");
 const path = require("path");
+const fs = require("fs");
 
-const storage = multer.diskStorage({
+// Ensure upload directories exist
+const ensureDir = (dir) => {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+};
+
+// Storage for task files (advisor uploads)
+const taskStorage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "uploads/tasks");
+    const dir = "uploads/tasks";
+    ensureDir(dir);
+    cb(null, dir);
+  },
+  filename: (req, file, cb) => {
+    const ext = path.extname(file.originalname);
+    const unique = Date.now() + "-" + Math.round(Math.random() * 1E9);
+    cb(null, unique + ext);
+  }
+});
+
+// Storage for submission files (student uploads)
+const submissionStorage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    const dir = "uploads/submissions";
+    ensureDir(dir);
+    cb(null, dir);
   },
   filename: (req, file, cb) => {
     const ext = path.extname(file.originalname);
@@ -17,6 +42,7 @@ const fileFilter = (req, file, cb) => {
   cb(null, true);
 };
 
-const upload = multer({ storage, fileFilter });
+const upload = multer({ storage: taskStorage, fileFilter });
+const uploadSubmission = multer({ storage: submissionStorage, fileFilter });
 
-module.exports = upload;
+module.exports = { upload, uploadSubmission };

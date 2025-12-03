@@ -16,10 +16,13 @@ exports.submitTask = async (req, res) => {
       return res.status(403).json({ message: "Not authorized for this task" });
     }
 
+    // Normalize file path to use forward slashes and prepend /
+    const fileUrl = "/" + req.file.path.replace(/\\/g, "/");
+
     // Check for existing submission
     let submission = await Submission.findOne({ taskId, studentId: req.user._id });
     if (submission) {
-      submission.fileUrl = req.file.path;
+      submission.fileUrl = fileUrl;
       submission.status = "submitted";
       submission.updatedAt = Date.now();
       await submission.save();
@@ -30,7 +33,7 @@ exports.submitTask = async (req, res) => {
     submission = await Submission.create({
       taskId,
       studentId: req.user._id,
-      fileUrl: req.file.path,
+      fileUrl: fileUrl,
       status: "submitted",
     });
 

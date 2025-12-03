@@ -5,7 +5,7 @@ exports.getProjectMessages = async (req, res) => {
   const { projectId } = req.params;
   try {
     const messages = await Discussion.find({ projectId })
-      .populate("userId", "name role")
+      .populate("sender", "name role")
       .sort({ createdAt: 1 }); // Sort messages by time
     res.json(messages);
   } catch (err) {
@@ -25,11 +25,11 @@ exports.postMessage = async (req, res) => {
 
     const newMessage = await Discussion.create({
       projectId,
-      userId: req.user._id, // Ensure `req.user` is set by auth middleware
+      sender: req.user._id,
       message,
     });
 
-    const populatedMessage = await newMessage.populate("userId", "name role");
+    const populatedMessage = await newMessage.populate("sender", "name role");
 
     res.status(201).json(populatedMessage);
   } catch (err) {

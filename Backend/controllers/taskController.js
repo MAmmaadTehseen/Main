@@ -6,10 +6,6 @@ const Submission = require("../models/Submission");
 const createTask = async (req, res) => {
   const { name, instructions, projectId } = req.body;
 
-  if (!req.file) {
-    return res.status(400).json({ message: "Instruction file is required" });
-  }
-
   try {
     const project = await Project.findById(projectId);
     if (!project) return res.status(404).json({ message: "Project not found" });
@@ -19,13 +15,19 @@ const createTask = async (req, res) => {
       return res.status(403).json({ message: "Only advisors on this project can create tasks" });
     }
 
-    const task = await Task.create({
+    const taskData = {
       name,
       instructions,
       projectId,
       createdBy: req.user._id,
-      fileUrl: req.file.path,
-    });
+    };
+
+    // File is optional
+    if (req.file) {
+      taskData.fileUrl = req.file.path;
+    }
+
+    const task = await Task.create(taskData);
 
     res.status(201).json({ message: "Task created", task });
   } catch (err) {

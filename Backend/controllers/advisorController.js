@@ -56,6 +56,50 @@ exports.getAdvisorProjects = async (req, res) => {
   }
 };
 
+// Delete project (only advisor who owns the project)
+exports.deleteProject = async (req, res) => {
+  const { projectId } = req.params;
+
+  try {
+    const project = await Project.findById(projectId);
+    if (!project) return res.status(404).json({ message: "Project not found" });
+
+    // Check if advisor owns this project
+    if (!project.advisors.includes(req.user._id)) {
+      return res.status(403).json({ message: "Not authorized to delete this project" });
+    }
+
+    // Delete all tasks and submissions related to this project
+    const Task = require("../models/Task");
+    const Submission = require("../models/Submission");
+    const Discussion = require("../models/Discussion");
+
+    const tasks = await Task.find({ projectId });
+    for (const task of tasks) {
+      await Submission.deleteMany({ taskId: task._id });
+    }
+    await Task.deleteMany({ projectId });
+    await Discussion.deleteMany({ projectId });
+
+    // Delete the project
+    await Project.findByIdAndDelete(projectId);
+
+    res.json({ message: "Project and all related data deleted successfully" });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
+// Get all students for advisor to add to projects
+exports.getAllStudents = async (req, res) => {
+  try {
+    const students = await User.find({ role: "student" }).select("name email");
+    res.json(students);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 
 exports.getAdvisorProjectTasks = async (req, res) => {
   const { projectId } = req.params;
@@ -136,7 +180,7 @@ const Task = require("../models/Task");
 // Grade a submission
 exports.gradeSubmission = async (req, res) => {
   const { submissionId } = req.params;
-  const { marks, feedback } = req.body;
+  const { marks } = req.body;
 
   try {
     const submission = await Submission.findById(submissionId).populate({
@@ -153,8 +197,7 @@ exports.gradeSubmission = async (req, res) => {
     if (!isAdvisor) return res.status(403).json({ message: "Not authorized" });
 
     submission.marks = marks;
-    submission.feedback = feedback;
-    submission.evaluated = true;
+    submission.status = "evaluated";
     await submission.save();
 
     res.json({ message: "Submission graded", submission });
@@ -163,7 +206,7 @@ exports.gradeSubmission = async (req, res) => {
   }
 };
 
-// Mark task as completed (when all submissions are graded)
+// Mark task as completed
 exports.completeTask = async (req, res) => {
   const { taskId } = req.params;
 
@@ -174,15 +217,7 @@ exports.completeTask = async (req, res) => {
     const isAdvisor = task.projectId.advisors.includes(req.user._id);
     if (!isAdvisor) return res.status(403).json({ message: "Not authorized" });
 
-    // Check all submissions are evaluated
-    const submissions = await Submission.find({ taskId });
-    const allEvaluated = submissions.every((s) => s.evaluated);
-
-    if (!allEvaluated) {
-      return res.status(400).json({ message: "Not all submissions are evaluated" });
-    }
-
-    task.status = "completed";
+    task.isCompleted = true;
     await task.save();
 
     res.json({ message: "Task marked as completed", task });

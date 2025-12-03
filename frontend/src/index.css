@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary Colors */
+  --primary-color: #1ABC9C;
+  --primary-hover: #16A085;
+
+  /* Secondary Colors */
+  --secondary-color: #1B4965;
+  --secondary-light: #2D6A8F;
+
+  /* Background Colors */
+  --background-color: #F0F0F0;
+  --background-light: #F5F7FA;
+
+  /* Text Colors */
+  --white: #FFFFFF;
+  --text-dark: #1B4965;
+  --text-light: #6B7280;
+
+  /* Border & UI */
+  --border-color: #E5E7EB;
+
+  /* Status Colors */
+  --success-color: #10B981;
+  --warning-color: #F59E0B;
+  --error-color: #EF4444;
+
+  /* Shadows */
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.1);
+
+  /* Layout */
+  --max-width: 1440px;
+  --content-max-width: 1200px;
+  --sidebar-width: 260px;
+  --header-height: 60px;
+
+  /* Responsive Breakpoints (for reference) */
+  /* xs: 0-575px (mobile) */
+  /* sm: 576-767px (mobile landscape) */
+  /* md: 768-991px (tablet) */
+  /* lg: 992-1199px (desktop) */
+  /* xl: 1200px+ (large desktop) */
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  outline: none;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-light);
+}
+
+/* Common Page Styles */
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 24px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  font-size: 16px;
+  color: var(--text-light);
+}
+
+/* Responsive utilities */
+@media (max-width: 991px) {
+  .page-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .page-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+}
