@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
 const { authMiddleware, studentOnly } = require("../middleware/authMiddleware");
-const upload = require("../middleware/upload");
+const { uploadSubmission } = require("../middleware/upload");
 const { submitTask } = require("../controllers/submissionController");
-const { getStudentProjects, getStudentProjectTasks, getStudentTask,editSubmission  } = require("../controllers/studentController");
+const { getStudentProjects, getStudentProjectTasks, getStudentTask, editSubmission } = require("../controllers/studentController");
 
-router.post("/submit-task", authMiddleware, upload.single("file"), submitTask);
+router.post("/submit-task", authMiddleware, studentOnly, uploadSubmission.single("file"), submitTask);
 
 
 router.get("/projects", authMiddleware, studentOnly, getStudentProjects);

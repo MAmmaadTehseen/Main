@@ -1,0 +1,52 @@
+.admin-dashboard {
+  max-width: var(--content-max-width);
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 600px;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.stat-value {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .stat-value {
+    font-size: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 100%;
+  }
+
+  .stat-label {
+    font-size: 14px;
+  }
+
+  .stat-value {
+    font-size: 28px;
+  }
+}
