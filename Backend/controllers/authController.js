@@ -93,10 +93,14 @@ exports.forgotPassword = async (req, res) => {
 
     // Send password reset email
     try {
+      console.log("Attempting to send email to:", email);
+      console.log("EMAIL_USER:", process.env.EMAIL_USER);
+      console.log("FRONTEND_URL:", process.env.FRONTEND_URL);
       await sendPasswordResetEmail(email, resetToken);
-      console.log(`Password reset email sent to: ${email}`);
+      console.log(`Password reset email sent successfully to: ${email}`);
     } catch (emailError) {
-      console.error("Error sending email:", emailError);
+      console.error("Error sending email:", emailError.message);
+      console.error("Full error:", emailError);
       // Still return success to prevent email enumeration
     }
 
