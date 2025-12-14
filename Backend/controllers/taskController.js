@@ -24,7 +24,7 @@ const createTask = async (req, res) => {
 
     // File is optional
     if (req.file) {
-      taskData.fileUrl = req.file.path;
+      taskData.fileUrl = "/" + req.file.path.replace(/\\/g, "/");
     }
 
     const task = await Task.create(taskData);

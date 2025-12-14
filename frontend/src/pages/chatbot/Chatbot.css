@@ -46,6 +46,24 @@
   font-style: italic;
 }
 
+.pdf-link {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 12px;
+  background-color: rgba(27, 73, 101, 0.1);
+  color: var(--primary-color);
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.pdf-link:hover {
+  background-color: rgba(27, 73, 101, 0.2);
+  text-decoration: none;
+}
+
 .chatbot-input-area {
   margin-bottom: 20px;
 }

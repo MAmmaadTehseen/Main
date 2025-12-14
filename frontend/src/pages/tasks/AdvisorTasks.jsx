@@ -75,7 +75,7 @@ const AdvisorTasks = () => {
           try {
             const submissionsRes = await advisorAPI.getTaskSubmissions(task._id);
             const submissions = submissionsRes.data;
-            const evaluated = submissions.filter(s => s.evaluated || s.status === 'evaluated').length;
+            const evaluated = submissions.filter(s => s.status === 'evaluated').length;
             return {
               ...task,
               submissionCount: submissions.length,

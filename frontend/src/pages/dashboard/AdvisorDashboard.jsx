@@ -52,7 +52,7 @@ const AdvisorDashboard = () => {
 
                 // Count pending reviews (submitted but not evaluated)
                 submissions.forEach(sub => {
-                  if (sub.status === 'submitted' && !sub.evaluated) {
+                  if (sub.status === 'submitted' || (sub.status !== 'evaluated' && sub.marks === null)) {
                     pendingReviews++;
                   }
                 });

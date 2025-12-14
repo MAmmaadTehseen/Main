@@ -11,15 +11,16 @@ exports.getProjectProgress = async (req, res) => {
     if (!project) return res.status(404).json({ message: "Project not found" });
 
     const totalTasks = await Task.countDocuments({ projectId });
-    const completedTasks = await Task.countDocuments({ projectId, status: "completed" });
+    const completedTasks = await Task.countDocuments({ projectId, isCompleted: true });
 
-    const progress = totalTasks > 0 ? (completedTasks / totalTasks) * 100 : 0;
+    const completionPercentage = totalTasks > 0 ? Math.round((completedTasks / totalTasks) * 100) : 0;
 
     res.json({
       projectId,
       totalTasks,
       completedTasks,
-      progress: `${progress.toFixed(2)}%`,
+      completionPercentage,
+      progress: `${completionPercentage}%`,
     });
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -35,15 +36,16 @@ exports.getTaskProgress = async (req, res) => {
     if (!task) return res.status(404).json({ message: "Task not found" });
 
     const totalSubmissions = await Submission.countDocuments({ taskId });
-    const evaluatedSubmissions = await Submission.countDocuments({ taskId, evaluated: true });
+    const evaluatedSubmissions = await Submission.countDocuments({ taskId, status: "evaluated" });
 
-    const progress = totalSubmissions > 0 ? (evaluatedSubmissions / totalSubmissions) * 100 : 0;
+    const completionPercentage = totalSubmissions > 0 ? Math.round((evaluatedSubmissions / totalSubmissions) * 100) : 0;
 
     res.json({
       taskId,
       totalSubmissions,
       evaluatedSubmissions,
-      progress: `${progress.toFixed(2)}%`,
+      completionPercentage,
+      progress: `${completionPercentage}%`,
     });
   } catch (err) {
     res.status(500).json({ message: err.message });

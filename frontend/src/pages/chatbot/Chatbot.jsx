@@ -10,8 +10,8 @@ const Chatbot = () => {
   const [loading, setLoading] = useState(false);
 
   const quickActions = [
-    'Search FYP Projects',
-    'Search Advisor List',
+    'Show ongoing and completed projects',
+    'Show advisor workload and availability',
     'Frequently Asked Questions',
   ];
 
@@ -26,7 +26,11 @@ const Chatbot = () => {
 
     try {
       const response = await chatbotAPI.ask({ question: userMessage });
-      setConversation(prev => [...prev, { type: 'bot', text: response.data.answer }]);
+      setConversation(prev => [...prev, {
+        type: 'bot',
+        text: response.data.answer,
+        pdf: response.data.pdf || null
+      }]);
     } catch (error) {
       console.error('Error asking chatbot:', error);
       setConversation(prev => [...prev, {
@@ -52,6 +56,16 @@ const Chatbot = () => {
             {conversation.map((msg, index) => (
               <div key={index} className={`chat-message ${msg.type}`}>
                 <p>{msg.text}</p>
+                {msg.pdf && (
+                  <a
+                    href={msg.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="pdf-link"
+                  >
+                    📄 View Related Document
+                  </a>
+                )}
               </div>
             ))}
             {loading && (
