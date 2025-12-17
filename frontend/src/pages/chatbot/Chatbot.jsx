@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { chatbotAPI } from '../../services/api';
 import Card from '../../components/common/Card';
 import { MdAdd } from 'react-icons/md';
@@ -8,6 +8,11 @@ const Chatbot = () => {
   const [query, setQuery] = useState('');
   const [conversation, setConversation] = useState([]);
   const [loading, setLoading] = useState(false);
+  const conversationEndRef = useRef(null);
+
+  useEffect(() => {
+    conversationEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [conversation, loading]);
 
   const quickActions = [
     'Show ongoing and completed projects',
@@ -73,6 +78,7 @@ const Chatbot = () => {
                 <p className="typing">Typing...</p>
               </div>
             )}
+            <div ref={conversationEndRef} />
           </div>
         )}
 
