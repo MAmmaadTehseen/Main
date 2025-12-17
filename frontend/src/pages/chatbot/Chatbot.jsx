@@ -97,18 +97,7 @@ const Chatbot = () => {
           </form>
         </div>
 
-        <div className="quick-actions">
-          {quickActions.map((action, index) => (
-            <button
-              key={index}
-              className="quick-action-btn"
-              onClick={() => handleQuickAction(action)}
-              disabled={loading}
-            >
-              {action}
-            </button>
-          ))}
-        </div>
+      
       </Card>
     </div>
   );
