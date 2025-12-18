@@ -65,17 +65,8 @@ const Sidebar = ({ isOpen, onClose }) => {
     <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
       <div className="sidebar-logo">
         <div className="logo-icon">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="30" stroke="#1ABC9C" strokeWidth="3" fill="none"/>
-            <path d="M50 15 L50 5" stroke="#1ABC9C" strokeWidth="3"/>
-            <path d="M50 95 L50 85" stroke="#1ABC9C" strokeWidth="3"/>
-            <path d="M15 50 L5 50" stroke="#1ABC9C" strokeWidth="3"/>
-            <path d="M95 50 L85 50" stroke="#1ABC9C" strokeWidth="3"/>
-            <path d="M50 20 L60 35 L50 30 L40 35 Z" fill="#1ABC9C"/>
-            <path d="M35 45 L65 45 L65 55 L60 50 L55 55 L50 50 L45 55 L40 50 L35 55 Z" fill="#1B4965"/>
-          </svg>
+          <img src="/logo.png" alt="FYP Compass Logo" />
         </div>
-        <span className="logo-text">FYP COMPASS</span>
         <button className="sidebar-close" onClick={onClose}>
           <MdClose />
         </button>
