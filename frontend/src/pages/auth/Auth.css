@@ -3,7 +3,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--background-color);
+  background-image: url("/ucp_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   padding: 20px;
 }
 

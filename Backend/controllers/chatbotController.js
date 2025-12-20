@@ -5,7 +5,2075 @@ const knowledgeBase = [
     keywords: ["detectra", "video analysis", "cctv", "surveillance", "security"],
     responseText: "Project: DETECTRA AI\nAdvisor: Mr. Usman Aamer\nStatus: In Process of Completion\nDescription: A unified web application for multimodal video analysis. Unlike systems relying on third-party APIs, it integrates object detection, logo recognition, and audio transcription into a single platform using transformers.",
     pdfUrl: "/Ongoing and Completed Projects-13-11-2025.pdf"
+  }
+  ,
+  {
+    "keywords": [
+      "research",
+      "abbas",
+      "advisor",
+      "abbaskhalid",
+      "communication systems",
+      "supervisor",
+      "khalid"
+    ],
+    "responseText": "Advisor: DR. ABBAS KHALID\nDepartment: CS\nAvailable Slots: 5\nDomains: Research, Communication Systems\nEmail: abbas.khalid@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
   },
+  {
+    "keywords": [
+      "research",
+      "shabbar",
+      "advisor",
+      "ahmad",
+      "data mining",
+      "software development",
+      "ahmadkazmi",
+      "game development",
+      "kazmi",
+      "data analytics",
+      "supervisor",
+      "wad"
+    ],
+    "responseText": "Advisor: DR. AHMAD SHABBAR KAZMI\nDepartment: CS\nAvailable Slots: 5\nDomains: Game Development, Data Analytics, WAD, Research,  Software Development, Data Mining\nEmail: ahmad.kazmi@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "ghulammustafa02",
+      "advisor",
+      "ghulam",
+      "ipcomputer vision",
+      "supervisor",
+      "mustafa"
+    ],
+    "responseText": "Advisor: DR. GHULAM MUSTAFA\nDepartment: CS\nAvailable Slots: 5\nDomains: Research, AI, IP/Computer Vision\nEmail: ghulammustafa02@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "anjum",
+      "research",
+      "advisor",
+      "robotics",
+      "ipcomputer vision",
+      "irfan",
+      "supervisor",
+      "hardware",
+      "wireless communication",
+      "irfananjum",
+      "digital signal processing"
+    ],
+    "responseText": "Advisor: DR. IRFAN ANJUM\nDepartment: CS\nAvailable Slots: 5\nDomains: Hardware, Research, IP/Computer Vision, Robotics, AI,  Wireless Communication, Digital Signal Processing\nEmail: irfan.anjum@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "kashifnasr",
+      "kashif",
+      "advisor",
+      "nasr",
+      "supervisor",
+      "wad"
+    ],
+    "responseText": "Advisor: DR. KASHIF NASR\nDepartment: CS\nAvailable Slots: 5\nDomains: WAD, DB\nEmail: kashif.nasr@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "ipcomputer vision",
+      "supervisor",
+      "umair",
+      "drumair"
+    ],
+    "responseText": "Advisor: DR. M. UMAIR\nDepartment: CS\nAvailable Slots: 5\nDomains: Research, IP/Computer Vision, AI\nEmail: dr.umair@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "mohsin",
+      "advisor",
+      "pattern recognition music classification",
+      "ashraf",
+      "classification algorithms using deep learning approaches",
+      "supervisor",
+      "mohsinashraf"
+    ],
+    "responseText": "Advisor: DR. MOHSIN ASHRAF\nDepartment: CS\nAvailable Slots: 5\nDomains: Classification Algorithms using deep learning Approaches,  Pattern Recognition (Music Classification)\nEmail: mohsin.ashraf@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "amjad",
+      "deanfoit",
+      "research",
+      "iqbal",
+      "advisor",
+      "ipcomputer vision",
+      "muhammad",
+      "supervisor"
+    ],
+    "responseText": "Advisor: DR. MUHAMMAD AMJAD  IQBAL\nDepartment: CS\nAvailable Slots: 5\nDomains: Research, IP/Computer Vision, AI, ML\nEmail: dean.foit@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "sarwar",
+      "advisor",
+      "embedded system",
+      "muhammad",
+      "supervisor",
+      "hardware",
+      "adeanfoit",
+      "ehsan"
+    ],
+    "responseText": "Advisor: DR. MUHAMMAD SARWAR  EHSAN\nDepartment: CS\nAvailable Slots: 5\nDomains: Hardware, Research, Embedded System\nEmail: adean.foit@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "iot",
+      "rabiatehseen",
+      "federated learning",
+      "supervisor",
+      "iov",
+      "blockchain",
+      "tehseen",
+      "rabia"
+    ],
+    "responseText": "Advisor: DR. RABIA TEHSEEN\nDepartment: CS\nAvailable Slots: 5\nDomains: Research, AI, Federated Learning, Block-Chain, IOT, IOV\nEmail: rabia.tehseen@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "andleeb",
+      "data mining",
+      "sairagillani",
+      "gillani",
+      "saira",
+      "supervisor",
+      "text mining"
+    ],
+    "responseText": "Advisor: DR. SAIRA ANDLEEB GILLANI\nDepartment: CS\nAvailable Slots: 5\nDomains: Research, Data Mining, Text Mining\nEmail: Saira.gillani@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "syed",
+      "shah",
+      "bukhari",
+      "robotics",
+      "human robot interaction",
+      "cognitive robotics",
+      "tanweershah",
+      "supervisor",
+      "tanweer"
+    ],
+    "responseText": "Advisor: DR. SYED TANWEER SHAH  BUKHARI\nDepartment: CS\nAvailable Slots: 5\nDomains: Robotics, AI, Human Robot Interaction, Cognitive Robotics\nEmail: tanweer.shah@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "hassan",
+      "advisor",
+      "syed",
+      "supervisor",
+      "zulqadarhassan",
+      "zulqadar"
+    ],
+    "responseText": "Advisor: DR. SYED ZULQADAR HASSAN\nDepartment: CS\nAvailable Slots: 5\nDomains: Research\nEmail: zulqadar.hassan@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "game development",
+      "abdulsaboor",
+      "ipcomputer vision",
+      "supervisor",
+      "abdul",
+      "tamoor",
+      "saboor"
+    ],
+    "responseText": "Advisor: MR. ABDUL SABOOR TAMOOR\nDepartment: CS\nAvailable Slots: 5\nDomains: Game Development, IP/Computer Vision\nEmail: abdulsaboor@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "mad",
+      "ahmad",
+      "embedded system",
+      "iot",
+      "arslan",
+      "supervisor",
+      "ahmadarslan"
+    ],
+    "responseText": "Advisor: MR. AHMAD ARSLAN\nDepartment: CS\nAvailable Slots: 5\nDomains: MAD, Research, AI, Embedded System, IOT\nEmail: ahmad.arslan@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "abbas",
+      "advisor",
+      "robotics",
+      "embedded system",
+      "ali",
+      "aliabbas",
+      "supervisor"
+    ],
+    "responseText": "Advisor: MR. ALI ABBAS\nDepartment: CS\nAvailable Slots: 5\nDomains: Embedded System, Robotics, AI\nEmail: Ali.Abbas@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "raza",
+      "data mining",
+      "ali",
+      "data science",
+      "aliraza02",
+      "supervisor"
+    ],
+    "responseText": "Advisor: MR. ALI RAZA\nDepartment: CS\nAvailable Slots: 5\nDomains: Data Mining, Data Science\nEmail: ali.raza02@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "waseem",
+      "software development",
+      "annas",
+      "annaswaseem",
+      "supervisor",
+      "malik",
+      "cryptography"
+    ],
+    "responseText": "Advisor: MR. ANNAS WASEEM MALIK\nDepartment: CS\nAvailable Slots: 5\nDomains: Software Development, Research, Cryptography\nEmail: annas.waseem@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "asad",
+      "advisor",
+      "asadkamal",
+      "supervisor",
+      "kamal",
+      "nlp",
+      "wad"
+    ],
+    "responseText": "Advisor: MR. ASAD KAMAL\nDepartment: CS\nAvailable Slots: 5\nDomains: WAD, DB, ML, NLP\nEmail: asad.kamal@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "asad",
+      "advisor",
+      "robotics",
+      "embedded system",
+      "medical  physicsmedical electronics",
+      "supervisor",
+      "hardware",
+      "khan",
+      "aukhan",
+      "umar"
+    ],
+    "responseText": "Advisor: MR. ASAD UMAR KHAN\nDepartment: CS\nAvailable Slots: 5\nDomains: Hardware, Embedded System, Robotics, Medical  Physics/Medical Electronics\nEmail: aukhan@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "cloud computing",
+      "advisor",
+      "asiffarooq",
+      "game development",
+      "farooq",
+      "asif",
+      "supervisor",
+      "wad"
+    ],
+    "responseText": "Advisor: MR. ASIF FAROOQ\nDepartment: CS\nAvailable Slots: 5\nDomains: WAD, Game Development, Cloud Computing\nEmail: asif.farooq@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "raza",
+      "robotics",
+      "asim",
+      "software development",
+      "game development",
+      "asimraza",
+      "supervisor"
+    ],
+    "responseText": "Advisor: MR. ASIM RAZA\nDepartment: CS\nAvailable Slots: 5\nDomains: Software Development, Game Development, Research, DB,  Robotics, AI\nEmail: asim.raza@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "awais",
+      "advisor",
+      "mad",
+      "software development",
+      "ipcomputer vision",
+      "supervisor",
+      "awaislodhi",
+      "lodhi"
+    ],
+    "responseText": "Advisor: MR. AWAIS M. LODHI\nDepartment: CS\nAvailable Slots: 5\nDomains: Software Development, Research, MAD, IP/Computer Vision,  AI\nEmail: awais.lodhi@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "iot",
+      "ahmed",
+      "daniyal",
+      "supervisor",
+      "daniyalahmed",
+      "wad"
+    ],
+    "responseText": "Advisor: MR. DANIYAL AHMED\nDepartment: CS\nAvailable Slots: 5\nDomains: WAD, AI, Research, IOT\nEmail: daniyal.ahmed@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "mad",
+      "iot",
+      "software development",
+      "supervisor",
+      "saleem",
+      "sajid",
+      "engr",
+      "wad",
+      "sajidsaleem"
+    ],
+    "responseText": "Advisor: MR. ENGR. SAJID SALEEM\nDepartment: CS\nAvailable Slots: 5\nDomains: Software Development, WAD, MAD, Research, IOT\nEmail: Sajid.saleem@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "computer networking",
+      "logic and design",
+      "sheikh",
+      "supervisor",
+      "faisalmasud",
+      "electronics",
+      "masud",
+      "faisal"
+    ],
+    "responseText": "Advisor: MR. FAISAL MASUD SHEIKH\nDepartment: CS\nAvailable Slots: 5\nDomains: Computer Networking, Logic and Design, Electronics\nEmail: faisal.masud@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "shahid",
+      "hafiz",
+      "advisor",
+      "mad",
+      "bilal",
+      "hafizbilalshahid",
+      "supervisor",
+      "wad"
+    ],
+    "responseText": "Advisor: MR. HAFIZ BILAL SHAHID\nDepartment: CS\nAvailable Slots: 5\nDomains: SD, WAD, MAD, Research, GD, AI\nEmail: hafiz.bilalshahid@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "usamaishtiaq",
+      "research",
+      "hafiz",
+      "sdn security",
+      "usama",
+      "advisor",
+      "mad",
+      "cyber security",
+      "supervisor",
+      "ishtiaq"
+    ],
+    "responseText": "Advisor: MR. HAFIZ USAMA ISHTIAQ\nDepartment: CS\nAvailable Slots: 5\nDomains: MAD, Research, Cyber Security, SDN Security\nEmail: usama.ishtiaq@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "ahmad",
+      "networking",
+      "iot",
+      "imranahmad01",
+      "imran",
+      "supervisor"
+    ],
+    "responseText": "Advisor: MR. IMRAN AHMAD\nDepartment: CS\nAvailable Slots: 5\nDomains: SD, Research, IOT, Networking\nEmail: imran.ahmad01@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "irfanlatif",
+      "latif",
+      "supervisor",
+      "irfan"
+    ],
+    "responseText": "Advisor: MR. IRFAN LATIF\nDepartment: CS\nAvailable Slots: 5\nDomains: AI\nEmail: irfan.latif@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "software  development",
+      "research",
+      "advisor",
+      "mad",
+      "junaidaziz",
+      "ipcomputer vision",
+      "supervisor",
+      "junaid",
+      "wad",
+      "aziz"
+    ],
+    "responseText": "Advisor: MR. JUNAID AZIZ\nDepartment: CS\nAvailable Slots: 5\nDomains: WAD, MAD, DB, AI, IP/Computer Vision, ML, Software  Development, Research\nEmail: junaidaziz@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "liaquatmajeed",
+      "advisor",
+      "software development",
+      "liaquat",
+      "sheikh",
+      "supervisor",
+      "majeed",
+      "wad"
+    ],
+    "responseText": "Advisor: MR. LIAQUAT MAJEED SHEIKH\nDepartment: CS\nAvailable Slots: 5\nDomains: Software Development, WAD, DB, ML\nEmail: liaquat.majeed@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "hassan",
+      "advisor",
+      "robotics",
+      "embedded system",
+      "ammarhassan",
+      "ammar",
+      "ipcomputer vision",
+      "supervisor",
+      "hardware"
+    ],
+    "responseText": "Advisor: MR. M. AMMAR HASSAN\nDepartment: CS\nAvailable Slots: 5\nDomains: Hardware, IP/Computer Vision, AI, Embedded System,  Robotics\nEmail: ammar.hassan@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "haroon",
+      "research",
+      "wireless communication and networks",
+      "advisor",
+      "masifharoon",
+      "asif",
+      "supervisor",
+      "hardware"
+    ],
+    "responseText": "Advisor: MR. M. ASIF HAROON\nDepartment: CS\nAvailable Slots: 5\nDomains: Hardware, Research, Wireless Communication and Networks\nEmail: m.asifharoon@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "robotics",
+      "embedded system",
+      "iot",
+      "hardware",
+      "rehan",
+      "supervisor",
+      "saleem",
+      "rehansaleem"
+    ],
+    "responseText": "Advisor: MR. M. REHAN SALEEM\nDepartment: CS\nAvailable Slots: 5\nDomains: Hardware, Research, Embedded System, Robotics, IOT, ML\nEmail: rehan.saleem@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "umarhameed",
+      "advisor",
+      "mad",
+      "software development",
+      "game development",
+      "hameed",
+      "supervisor",
+      "wad",
+      "umar"
+    ],
+    "responseText": "Advisor: MR. M. UMAR HAMEED\nDepartment: CS\nAvailable Slots: 5\nDomains: Software Development, WAD, MAD, Game Development,  DB\nEmail: umar.hameed@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "zulkiflhasan",
+      "advisor",
+      "blockchain",
+      "cloud computingcloud native apps",
+      "zulkifl",
+      "hasan",
+      "supervisor",
+      "cyber security",
+      "hardware"
+    ],
+    "responseText": "Advisor: MR. M. ZULKIFL HASAN\nDepartment: CS\nAvailable Slots: 5\nDomains: Hardware, Research, Cyber Security, Block-Chain, ML,  Cloud Computing/Cloud Native Apps\nEmail: zulkifl.hasan@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "abbas",
+      "mohsin",
+      "advisor",
+      "blockchain",
+      "mohsina",
+      "supervisor",
+      "text mining",
+      "nlp"
+    ],
+    "responseText": "Advisor: MR. MOHSIN ABBAS\nDepartment: CS\nAvailable Slots: 5\nDomains: AI, NLP, ML, Text Mining, Block-Chain\nEmail: mohsin.a@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "basit",
+      "mad",
+      "gilani",
+      "ali",
+      "basitgilani",
+      "software development",
+      "muhammad",
+      "supervisor",
+      "wad"
+    ],
+    "responseText": "Advisor: MR. MUHAMMAD BASIT ALI  GILANI\nDepartment: CS\nAvailable Slots: 5\nDomains: Software Development, WAD, MAD, DB\nEmail: basit.gilani@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "information security",
+      "mad",
+      "game  development",
+      "bilal",
+      "networks",
+      "muhammadbilalkhan",
+      "supervisor",
+      "muhammad",
+      "khan",
+      "wad"
+    ],
+    "responseText": "Advisor: MR. MUHAMMAD BILAL KHAN\nDepartment: CS\nAvailable Slots: 5\nDomains: Networks, Information Security, MAD, WAD, AI, Game  Development\nEmail: muhammad.bilalkhan@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "kashif",
+      "advisor",
+      "software development",
+      "ipcomputer vision",
+      "supervisor",
+      "muhammad",
+      "hardware",
+      "mukashif"
+    ],
+    "responseText": "Advisor: MR. MUHAMMAD KASHIF\nDepartment: CS\nAvailable Slots: 5\nDomains: Hardware, Software Development, IP/Computer Vision, AI\nEmail: mu.kashif@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "sabir",
+      "advisor",
+      "naeem",
+      "game development",
+      "supervisor",
+      "muhammad",
+      "naeemsabir"
+    ],
+    "responseText": "Advisor: MR. MUHAMMAD NAEEM  SABIR\nDepartment: CS\nAvailable Slots: 2\nDomains: Game Development\nEmail: naeem.sabir@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "noman",
+      "advisor",
+      "ipcomputer vision",
+      "supervisor",
+      "muhammad",
+      "nlp",
+      "muhammadnoman"
+    ],
+    "responseText": "Advisor: MR. MUHAMMAD NOMAN\nDepartment: CS\nAvailable Slots: 5\nDomains: IP/Computer Vision, AI, NLP, ML\nEmail: muhammadnoman@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "tauseefhanif",
+      "hanif",
+      "advisor",
+      "tauseef",
+      "supervisor",
+      "muhammad",
+      "process mining",
+      "formal methods",
+      "wad"
+    ],
+    "responseText": "Advisor: MR. MUHAMMAD TAUSEEF  HANIF\nDepartment: CS\nAvailable Slots: 5\nDomains: WAD, Research, Process Mining, Formal Methods\nEmail: tauseef.hanif@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "muneeb",
+      "advisor",
+      "mad",
+      "ali",
+      "supervisor",
+      "muzaffar",
+      "muneebmuzaffar"
+    ],
+    "responseText": "Advisor: MR. MUNEEB ALI MUZAFFAR\nDepartment: CS\nAvailable Slots: 5\nDomains: MAD, Research, DB, GD, AI, ML\nEmail: muneeb.muzaffar@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "nasrullah",
+      "advisor",
+      "jaleel",
+      "nasrullahjaleel",
+      "ipcomputer vision",
+      "supervisor"
+    ],
+    "responseText": "Advisor: MR. NASRULLAH JALEEL\nDepartment: CS\nAvailable Slots: 5\nDomains: IP/Computer Vision\nEmail: nasrullah.jaleel@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "nomannazar",
+      "noman",
+      "advisor",
+      "electronic  typography",
+      "computerization of urdu script",
+      "nazar",
+      "ipcomputer vision",
+      "supervisor"
+    ],
+    "responseText": "Advisor: MR. NOMAN NAZAR\nDepartment: CS\nAvailable Slots: 5\nDomains: SD, Research, IP/Computer Vision, AI, Electronic  Typography, Computerization of Urdu Script\nEmail: noman.nazar@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "numanaslam",
+      "numan",
+      "aslam",
+      "ipcomputer vision",
+      "supervisor",
+      "wad"
+    ],
+    "responseText": "Advisor: MR. NUMAN ASLAM\nDepartment: CS\nAvailable Slots: 5\nDomains: WAD, Research, IP/Computer Vision\nEmail: numanaslam@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "habib",
+      "qaiserhabib",
+      "supervisor",
+      "qaiser",
+      "wad"
+    ],
+    "responseText": "Advisor: MR. QAISER HABIB\nDepartment: CS\nAvailable Slots: 5\nDomains: WAD, DB, AI, ML\nEmail: qaiser.habib@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "embedded system",
+      "supervisor",
+      "hardware",
+      "hussain",
+      "sajid",
+      "shussain",
+      "computer architecture"
+    ],
+    "responseText": "Advisor: MR. SAJID HUSSAIN\nDepartment: CS\nAvailable Slots: 5\nDomains: Hardware, Embedded System, Computer Architecture\nEmail: s.hussain@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "muneer",
+      "advisor",
+      "salman",
+      "supervisor",
+      "explainabale ai",
+      "salmanmuneer"
+    ],
+    "responseText": "Advisor: MR. SALMAN MUNEER\nDepartment: CS\nAvailable Slots: 5\nDomains: Research, AI, ML, eXplainabale AI\nEmail: salman.muneer@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "mad",
+      "ali",
+      "shaukatchaudhry",
+      "supervisor",
+      "shaukat",
+      "chaudhry",
+      "wad"
+    ],
+    "responseText": "Advisor: MR. SHAUKAT ALI CHAUDHRY\nDepartment: CS\nAvailable Slots: 5\nDomains: SD, WAD, MAD, DB\nEmail: shaukat.chaudhry@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "shoaib",
+      "shoaibkhan",
+      "software development",
+      "data mining",
+      "information retrieval",
+      "supervisor",
+      "khan",
+      "wad"
+    ],
+    "responseText": "Advisor: MR. SHOAIB KHAN\nDepartment: CS\nAvailable Slots: 5\nDomains: Software Development, WAD, DB, AI, Data Mining,  Information Retrieval\nEmail: Shoaib.Khan@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "syed",
+      "deep learning",
+      "data mining",
+      "syedirtaza",
+      "supervisor",
+      "nlp",
+      "muzaffar",
+      "irtaza"
+    ],
+    "responseText": "Advisor: MR. SYED IRTAZA MUZAFFAR\nDepartment: CS\nAvailable Slots: 5\nDomains: AI, ML, Deep Learning, Data Mining, NLP\nEmail: syed.irtaza@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "hassan",
+      "advisor",
+      "syed",
+      "mad",
+      "data science",
+      "supervisor",
+      "mujtaba",
+      "mujtabahassan"
+    ],
+    "responseText": "Advisor: MR. SYED M. MUJTABA  HASSAN\nDepartment: CS\nAvailable Slots: 5\nDomains: MAD, GD, Data Science, ML\nEmail: mujtaba.hassan@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "computer  architecture",
+      "advisor",
+      "syed",
+      "robotics",
+      "balti",
+      "embedded system",
+      "parallel and distributed computing",
+      "hardware",
+      "nisar",
+      "ipcomputer vision",
+      "supervisor",
+      "nisarbalti"
+    ],
+    "responseText": "Advisor: MR. SYED NISAR BALTI\nDepartment: CS\nAvailable Slots: 5\nDomains: Hardware, IP/Computer Vision, Embedded System, Robotics,  AI, Parallel and Distributed Computing, Computer  Architecture\nEmail: nisar.balti@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "usama",
+      "advisor",
+      "robotics",
+      "usamanasir",
+      "supervisor",
+      "nasir",
+      "wad"
+    ],
+    "responseText": "Advisor: MR. USAMA NASIR\nDepartment: CS\nAvailable Slots: 5\nDomains: SD, WAD, Robotics\nEmail: usama.nasir@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "deep learning",
+      "quality  of experience",
+      "usman",
+      "supervisor",
+      "computer networks",
+      "usmanaamer",
+      "aamer"
+    ],
+    "responseText": "Advisor: MR. USMAN AAMER\nDepartment: CS\nAvailable Slots: 4\nDomains: Research, ML, Deep Learning, Computer Networks, Quality  of Experience\nEmail: usman.aamer@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "younas",
+      "research",
+      "cryptographic algorithm",
+      "advisor",
+      "software development",
+      "usmanyounas",
+      "usman",
+      "supervisor",
+      "colored petri nets",
+      "formal modeling"
+    ],
+    "responseText": "Advisor: MR. USMAN YOUNAS\nDepartment: CS\nAvailable Slots: 5\nDomains: Software Development, Research, DB, Formal Modeling,  Colored Petri Nets, Cryptographic Algorithm\nEmail: usman.younas@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "mahmood",
+      "research",
+      "advisor",
+      "supervisor",
+      "amna",
+      "amnamahmood01"
+    ],
+    "responseText": "Advisor: MS. AMNA MAHMOOD\nDepartment: CS\nAvailable Slots: 5\nDomains: Research, DB\nEmail: amna.mahmood01@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "aneela",
+      "mehmood",
+      "supervisor",
+      "aneelamehmood"
+    ],
+    "responseText": "Advisor: MS. ANEELA MEHMOOD\nDepartment: CS\nAvailable Slots: 5\nDomains: Research, AI\nEmail: aneela.mehmood@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "deep learning",
+      "data  science",
+      "zahra",
+      "ipcomputer vision",
+      "supervisor",
+      "arooj",
+      "aroojzahra"
+    ],
+    "responseText": "Advisor: MS. AROOJ ZAHRA\nDepartment: CS\nAvailable Slots: 5\nDomains: Research, IP/Computer Vision, AI, Deep Learning, Data  Science\nEmail: arooj.zahra@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "arshia",
+      "advisor",
+      "naeem",
+      "arshianaeem",
+      "supervisor",
+      "ipcomputer vision"
+    ],
+    "responseText": "Advisor: MS. ARSHIA NAEEM\nDepartment: CS\nAvailable Slots: 5\nDomains: Research, IP/Computer Vision, AI\nEmail: arshia.naeem@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "zaheer",
+      "ayesha",
+      "advisor",
+      "mad",
+      "ayeshazaheer",
+      "software development",
+      "game development",
+      "supervisor",
+      "wad"
+    ],
+    "responseText": "Advisor: MS. AYESHA ZAHEER\nDepartment: CS\nAvailable Slots: 5\nDomains: Software Development, WAD, MAD, Game Development, AI\nEmail: ayesha.zaheer@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "beenish",
+      "advisor",
+      "mad",
+      "software development",
+      "supervisor",
+      "zafar",
+      "wad",
+      "beenishzafar"
+    ],
+    "responseText": "Advisor: MS. BEENISH ZAFAR\nDepartment: CS\nAvailable Slots: 5\nDomains: Software Development, WAD, MAD\nEmail: beenish.zafar@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "faiza",
+      "advisor",
+      "wad",
+      "mad",
+      "software development",
+      "faizakhadim",
+      "supervisor",
+      "khadim"
+    ],
+    "responseText": "Advisor: MS. FAIZA KHADIM\nDepartment: CS\nAvailable Slots: 5\nDomains: Software Development, WAD, MAD, DB\nEmail: faiza.khadim@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "iqbal",
+      "advisor",
+      "wad",
+      "mad",
+      "software development",
+      "fareehaiqbal",
+      "supervisor",
+      "fareeha"
+    ],
+    "responseText": "Advisor: MS. FAREEHA IQBAL\nDepartment: CS\nAvailable Slots: 5\nDomains: Software Development, WAD, MAD\nEmail: fareeha.iqbal@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "computer networking",
+      "alam",
+      "iot",
+      "supervisor",
+      "wad",
+      "hina",
+      "hinaalam"
+    ],
+    "responseText": "Advisor: MS. HINA ALAM\nDepartment: CS\nAvailable Slots: 5\nDomains: WAD, DB, IOT, ML, Computer Networking\nEmail: hina.alam@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "tahir",
+      "supervisor",
+      "hinatahir",
+      "hina"
+    ],
+    "responseText": "Advisor: MS. HINA TAHIR\nDepartment: CS\nAvailable Slots: 5\nDomains: DB\nEmail: hina.tahir@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "hiratayyab",
+      "advisor",
+      "deep learning",
+      "software development",
+      "hira",
+      "supervisor",
+      "tayyab",
+      "genai"
+    ],
+    "responseText": "Advisor: MS. HIRA TAYYAB\nDepartment: CS\nAvailable Slots: 5\nDomains: Software Development, Research, AI, Deep Learning, GenAI\nEmail: Hira.Tayyab@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "mahamarmaghan",
+      "maham",
+      "supervisor",
+      "armaghan",
+      "wad"
+    ],
+    "responseText": "Advisor: MS. MAHAM ARMAGHAN\nDepartment: CS\nAvailable Slots: 5\nDomains: WAD\nEmail: maham.armaghan@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "kausar",
+      "advisor",
+      "mad",
+      "mahekkausar",
+      "mahek",
+      "cyber security",
+      "supervisor"
+    ],
+    "responseText": "Advisor: MS. MAHEK KAUSAR\nDepartment: CS\nAvailable Slots: 5\nDomains: MAD, Cyber Security\nEmail: mahek.kausar@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "cloud computing",
+      "advisor",
+      "batool",
+      "telecommunication",
+      "supervisor",
+      "virtualization",
+      "mahrukh",
+      "mahrukhbatool"
+    ],
+    "responseText": "Advisor: MS. MAHRUKH BATOOL\nDepartment: CS\nAvailable Slots: 5\nDomains: Research, Cloud Computing, Virtualization,  Telecommunication\nEmail: Mahrukh.Batool@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "shahid",
+      "mahwish",
+      "advisor",
+      "mad",
+      "supervisor",
+      "mahwishshahid"
+    ],
+    "responseText": "Advisor: MS. MAHWISH SHAHID\nDepartment: CS\nAvailable Slots: 5\nDomains: SD, MAD, Research, AI\nEmail: mahwish.shahid@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "mad",
+      "marianazir",
+      "maria",
+      "ipcomputer vision",
+      "supervisor",
+      "nazir",
+      "wad"
+    ],
+    "responseText": "Advisor: MS. MARIA NAZIR\nDepartment: CS\nAvailable Slots: 5\nDomains: Research, AI, IP/Computer Vision, WAD, MAD\nEmail: maria.nazir@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "mad",
+      "software development",
+      "naz",
+      "supervisor",
+      "misbah",
+      "wad",
+      "misbahnaz"
+    ],
+    "responseText": "Advisor: MS. MISBAH NAZ\nDepartment: CS\nAvailable Slots: 5\nDomains: Software Development, WAD, MAD, DB\nEmail: misbah.naz@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "mad",
+      "iot",
+      "misha",
+      "asif",
+      "mishaasif",
+      "supervisor",
+      "security",
+      "blockchain"
+    ],
+    "responseText": "Advisor: MS. MISHA ASIF\nDepartment: CS\nAvailable Slots: 5\nDomains: MAD, Research, IOT, Block-Chain, Security\nEmail: misha.asif@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "nadia",
+      "advisor",
+      "nadiajehan",
+      "software development",
+      "jehan",
+      "supervisor",
+      "wad"
+    ],
+    "responseText": "Advisor: MS. NADIA JEHAN\nDepartment: CS\nAvailable Slots: 5\nDomains: Software Development, WAD, Research\nEmail: Nadia.Jehan@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "deep  learning",
+      "advisor",
+      "wad",
+      "mad",
+      "supervisor",
+      "arshad",
+      "rabiaarshad",
+      "computer networks",
+      "rabia"
+    ],
+    "responseText": "Advisor: MS. RABIA ARSHAD\nDepartment: CS\nAvailable Slots: 5\nDomains: WAD, MAD, Research, Computer Networks, ML, Deep  Learning\nEmail: rabia.arshad@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "sabah",
+      "advisor",
+      "arif",
+      "supervisor",
+      "sabaharif",
+      "wad"
+    ],
+    "responseText": "Advisor: MS. SABAH ARIF\nDepartment: CS\nAvailable Slots: 5\nDomains: WAD, AI, ML\nEmail: sabah.arif@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "mad",
+      "software development",
+      "aslam",
+      "supervisor",
+      "sadiaaslam",
+      "sadia",
+      "wad"
+    ],
+    "responseText": "Advisor: MS. SADIA ASLAM\nDepartment: CS\nAvailable Slots: 5\nDomains: Software Development, WAD, MAD, DB, Research, AI\nEmail: sadia.aslam@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "sammra",
+      "advisor",
+      "mad",
+      "deep learning",
+      "sammrahabib",
+      "habib",
+      "ipcomputer vision",
+      "supervisor",
+      "wad"
+    ],
+    "responseText": "Advisor: MS. SAMMRA HABIB\nDepartment: CS\nAvailable Slots: 5\nDomains: WAD, MAD, IP/Computer Vision, AI, ML, Deep Learning\nEmail: sammra.habib@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "mad",
+      "ali",
+      "sehar",
+      "supervisor",
+      "seharali",
+      "wad"
+    ],
+    "responseText": "Advisor: MS. SEHAR ALI\nDepartment: CS\nAvailable Slots: 5\nDomains: SD, WAD, MAD, Research, DB\nEmail: sehar.ali@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "sidra",
+      "advisor",
+      "data science",
+      "khalid",
+      "supervisor",
+      "sidrakhalid"
+    ],
+    "responseText": "Advisor: MS. SIDRA KHALID\nDepartment: CS\nAvailable Slots: 5\nDomains: GD, Data Science\nEmail: sidra.khalid@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "sundas",
+      "asghar",
+      "networks",
+      "supervisor",
+      "sundasasghar",
+      "wad"
+    ],
+    "responseText": "Advisor: MS. SUNDAS ASGHAR\nDepartment: CS\nAvailable Slots: 5\nDomains: HW, SD, WAD, Networks\nEmail: sundas.asghar@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "mad",
+      "robotics",
+      "bakht",
+      "embedded system",
+      "zar",
+      "zarbakht",
+      "data  mining",
+      "supervisor",
+      "big data",
+      "imtiaz"
+    ],
+    "responseText": "Advisor: MS. ZAR BAKHT IMTIAZ\nDepartment: CS\nAvailable Slots: 5\nDomains: HW, MAD, DB, GD, Embedded System, Robotics, Data  Mining, Big Data\nEmail: zar.bakht@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "deep learning",
+      "ali",
+      "supervisor",
+      "alisaeed",
+      "nlp",
+      "wad",
+      "saeed"
+    ],
+    "responseText": "Advisor: DR. ALI SAEED\nDepartment: SE\nAvailable Slots: 5\nDomains: WAD, Research, AI, ML, NLP, Deep Learning\nEmail: ali.saeed@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "anammustaqeem",
+      "advisor",
+      "medical image classification",
+      "anam",
+      "adhoc  networking",
+      "mustaqeem",
+      "supervisor",
+      "recommender systems",
+      "wad"
+    ],
+    "responseText": "Advisor: DR. ANAM MUSTAQEEM\nDepartment: SE\nAvailable Slots: 5\nDomains: Research, WAD, AI, Recommender Systems, ADHOC  Networking, Medical Image Classification\nEmail: anam.mustaqeem@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "video analytics",
+      "gulshansaleem",
+      "ipcomputer vision",
+      "supervisor",
+      "gulshan",
+      "saleem",
+      "nlp"
+    ],
+    "responseText": "Advisor: DR. GULSHAN SALEEM\nDepartment: SE\nAvailable Slots: 5\nDomains: AI, IP/Computer Vision, NLP, Video Analytics\nEmail: gulshan.saleem@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "hafiz",
+      "advisor",
+      "mad",
+      "internet  of mobile things",
+      "embedded system",
+      "iot",
+      "hardware",
+      "software development",
+      "contextaware system",
+      "supervisor",
+      "haque",
+      "mahfoozhaque",
+      "wad",
+      "mahfooz"
+    ],
+    "responseText": "Advisor: DR. HAFIZ MAHFOOZ UL  HAQUE\nDepartment: SE\nAvailable Slots: 5\nDomains: Hardware, Software Development, WAD, MAD, Research,  AI, Embedded System, IOT, Context-aware System, Internet  of Mobile Things\nEmail: mahfooz.haque@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "mad",
+      "game  development",
+      "software development",
+      "imran",
+      "supervisor",
+      "arshad",
+      "hardware",
+      "iarshad",
+      "wad"
+    ],
+    "responseText": "Advisor: DR. IMRAN ARSHAD CH.\nDepartment: SE\nAvailable Slots: 5\nDomains: Hardware, Software Development, WAD, MAD, Game  Development\nEmail: i.arshad@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "madnanaziz",
+      "applications in metaheuristic  algorithms",
+      "supervisor",
+      "hardware",
+      "adnan",
+      "aziz"
+    ],
+    "responseText": "Advisor: DR. M. ADNAN AZIZ\nDepartment: SE\nAvailable Slots: 5\nDomains: Hardware, Research, AI, Applications in Meta-Heuristic  Algorithms\nEmail: m.adnanaziz@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "mazhar",
+      "nauman",
+      "research",
+      "advisor",
+      "naumaz",
+      "iot",
+      "computer security",
+      "supervisor",
+      "computer networking protocols  implementation"
+    ],
+    "responseText": "Advisor: DR. NAUMAN MAZHAR\nDepartment: SE\nAvailable Slots: 5\nDomains: Research, IOT, Computer Networking Protocols  Implementation, Computer Security\nEmail: nau.maz@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "abidbashir",
+      "advisor",
+      "mad",
+      "bashir",
+      "software development",
+      "supervisor",
+      "abid",
+      "wad"
+    ],
+    "responseText": "Advisor: MR. ABID BASHIR\nDepartment: SE\nAvailable Slots: 5\nDomains: Software Development, WAD, MAD, Research, DB\nEmail: abidbashir@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "robotics",
+      "adeel",
+      "arif",
+      "adeelarif",
+      "supervisor",
+      "ipcomputer vision"
+    ],
+    "responseText": "Advisor: MR. ADEEL ARIF\nDepartment: SE\nAvailable Slots: 5\nDomains: IP/Computer Vision, Robotics\nEmail: adeel.arif@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "robotics",
+      "ad hoc networks",
+      "embedded system",
+      "ahsan",
+      "ipcomputer vision",
+      "supervisor",
+      "hardware",
+      "ahsanazhar",
+      "azhar"
+    ],
+    "responseText": "Advisor: MR. AHSAN AZHAR\nDepartment: SE\nAvailable Slots: 5\nDomains: Hardware, Research, IP/Computer Vision, Robotics,  Embedded System, Ad. Hoc Networks\nEmail: ahsan.azhar@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "alihaider",
+      "advisor",
+      "data  science",
+      "haider",
+      "arif",
+      "ali",
+      "software development",
+      "supervisor",
+      "wad"
+    ],
+    "responseText": "Advisor: MR. ALI HAIDER ARIF\nDepartment: SE\nAvailable Slots: 5\nDomains: Software Development, WAD, Research, AI, ML, Data  Science\nEmail: ali.haider@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "mad",
+      "haider",
+      "haidersultan",
+      "software development",
+      "sultan",
+      "supervisor",
+      "ahad"
+    ],
+    "responseText": "Advisor: MR. HAIDER SULTAN AHAD\nDepartment: SE\nAvailable Slots: 5\nDomains: Software Development, MAD, DB\nEmail: haider.sultan@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "haroon",
+      "haroonwaheed",
+      "research",
+      "advisor",
+      "mad",
+      "waheed",
+      "software development",
+      "supervisor",
+      "abdul",
+      "wad"
+    ],
+    "responseText": "Advisor: MR. HAROON ABDUL WAHEED\nDepartment: SE\nAvailable Slots: 5\nDomains: Software Development, WAD, MAD, Research, DB\nEmail: haroon.waheed@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "imranashraf",
+      "ashraf",
+      "software development",
+      "imran",
+      "supervisor"
+    ],
+    "responseText": "Advisor: MR. IMRAN ASHRAF\nDepartment: SE\nAvailable Slots: 5\nDomains: Software Development\nEmail: imranashraf@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "ipcomputer vision",
+      "khizerhayat",
+      "supervisor",
+      "khizer",
+      "hayat"
+    ],
+    "responseText": "Advisor: MR. KHIZER HAYAT\nDepartment: SE\nAvailable Slots: 5\nDomains: Research, IP/Computer Vision, AI\nEmail: khizer.hayat@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "erp",
+      "software development",
+      "ipcomputer vision",
+      "mir",
+      "supervisor",
+      "tayyab",
+      "wad",
+      "tayyabmir"
+    ],
+    "responseText": "Advisor: MR. M. TAYYAB MIR\nDepartment: SE\nAvailable Slots: 5\nDomains: Software Development, WAD, Research, IP/Computer Vision,  ERP\nEmail: tayyab.mir@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "mzahidhussain",
+      "supervisor",
+      "hussain",
+      "zahid",
+      "wad"
+    ],
+    "responseText": "Advisor: MR. M. ZAHID HUSSAIN\nDepartment: SE\nAvailable Slots: 5\nDomains: WAD, Research, DB, AI\nEmail: m.zahidhussain@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "mohsin",
+      "advisor",
+      "mad",
+      "sami",
+      "mohsinsami",
+      "ipcomputer vision",
+      "supervisor"
+    ],
+    "responseText": "Advisor: MR. MOHSIN SAMI\nDepartment: SE\nAvailable Slots: 5\nDomains: MAD, MAD, Research, IP/Computer Vision, AI\nEmail: mohsin.sami@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "muhammadfiaz01",
+      "advisor",
+      "ipcomputer vision",
+      "supervisor",
+      "muhammad",
+      "fiaz"
+    ],
+    "responseText": "Advisor: MR. MUHAMMAD FIAZ\nDepartment: SE\nAvailable Slots: 5\nDomains: Research, IP/Computer Vision\nEmail: muhammad.fiaz01@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "ayubi",
+      "salahudin",
+      "advisor",
+      "wad",
+      "supervisor",
+      "salahudinayubi"
+    ],
+    "responseText": "Advisor: MR. SALAHUDIN AYUBI\nDepartment: SE\nAvailable Slots: 5\nDomains: SD, WAD, AI\nEmail: salahudin.ayubi@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "shahnawaz",
+      "advisor",
+      "shah",
+      "nawaz",
+      "supervisor",
+      "wad"
+    ],
+    "responseText": "Advisor: MR. SHAH NAWAZ\nDepartment: SE\nAvailable Slots: 5\nDomains: SD, WAD, Research, DB\nEmail: shah.nawaz@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "taimoorhassan01",
+      "hassan",
+      "advisor",
+      "software development",
+      "taimoor",
+      "supervisor",
+      "wad"
+    ],
+    "responseText": "Advisor: MR. TAIMOOR HASSAN\nDepartment: SE\nAvailable Slots: 5\nDomains: Software Development, WAD, Research\nEmail: Taimoor.Hassan01@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "wad",
+      "software development",
+      "usman",
+      "supervisor",
+      "akbar",
+      "usmanakbar"
+    ],
+    "responseText": "Advisor: MR. USMAN AKBAR\nDepartment: SE\nAvailable Slots: 5\nDomains: Software Development, WAD\nEmail: usman.akbar@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "waseem",
+      "robotics",
+      "information security",
+      "embedded system",
+      "aslam",
+      "supervisor",
+      "hardware",
+      "waseemaslam",
+      "cryptography",
+      "networks security"
+    ],
+    "responseText": "Advisor: MR. WASEEM ASLAM\nDepartment: SE\nAvailable Slots: 5\nDomains: Hardware, Embedded System, Robotics, Information Security,  Networks Security, Cryptography\nEmail: waseem.aslam@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "mad",
+      "asghar",
+      "supervisor",
+      "zain",
+      "wad",
+      "zainasghar"
+    ],
+    "responseText": "Advisor: MR. ZAIN ASGHAR\nDepartment: SE\nAvailable Slots: 5\nDomains: WAD, MAD\nEmail: zain.asghar@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "afifahameed",
+      "deep  learning",
+      "advisor",
+      "mad",
+      "hameed",
+      "ipcomputer vision",
+      "supervisor",
+      "afifa",
+      "nlp"
+    ],
+    "responseText": "Advisor: MS. AFIFA HAMEED\nDepartment: SE\nAvailable Slots: 5\nDomains: MAD, Research, IP/Computer Vision, AI, ML, NLP, Deep  Learning\nEmail: afifa.hameed@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "wad",
+      "supervisor",
+      "areeshasajjad",
+      "sajjad",
+      "areesha"
+    ],
+    "responseText": "Advisor: MS. AREESHA SAJJAD\nDepartment: SE\nAvailable Slots: 5\nDomains: SD, WAD, Research\nEmail: areesha.sajjad@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "kiran",
+      "advisor",
+      "mad",
+      "maria",
+      "mariakiran",
+      "hafiza",
+      "supervisor",
+      "wad"
+    ],
+    "responseText": "Advisor: MS. HAFIZA MARIA KIRAN\nDepartment: SE\nAvailable Slots: 5\nDomains: SD, WAD, MAD, Research\nEmail: maria.kiran@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "naveed",
+      "hira",
+      "hiranaveed",
+      "supervisor"
+    ],
+    "responseText": "Advisor: MS. HIRA NAVEED\nDepartment: SE\nAvailable Slots: 5\nDomains: Research\nEmail: hira.naveed@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "iqra",
+      "advisor",
+      "tahir",
+      "iqratahir",
+      "supervisor"
+    ],
+    "responseText": "Advisor: MS. IQRA TAHIR\nDepartment: SE\nAvailable Slots: 5\nDomains: SD, Research, DB\nEmail: iqra.tahir@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "laraibimran",
+      "imran",
+      "supervisor",
+      "laraib"
+    ],
+    "responseText": "Advisor: MS. LARAIB IMRAN\nDepartment: SE\nAvailable Slots: 5\nDomains: SD, Research\nEmail: laraib.imran@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "sqa",
+      "software development",
+      "madiha",
+      "yousaf",
+      "artificial neural networks",
+      "supervisor",
+      "madihayousaf",
+      "nlp",
+      "wad",
+      "malik"
+    ],
+    "responseText": "Advisor: MS. MADIHA YOUSAF MALIK\nDepartment: SE\nAvailable Slots: 5\nDomains: SQA, Software Development, ML, NLP, WAD, AI, Research,  Artificial Neural Networks\nEmail: madiha.yousaf@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "awan",
+      "advisor",
+      "meher",
+      "software development",
+      "mahammehr",
+      "maham",
+      "supervisor"
+    ],
+    "responseText": "Advisor: MS. MAHAM MEHER AWAN\nDepartment: SE\nAvailable Slots: 5\nDomains: Software Development, Research, AI\nEmail: maham.mehr@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "noor",
+      "advisor",
+      "mad",
+      "robotics",
+      "software development",
+      "maham",
+      "supervisor",
+      "wad",
+      "mahamnoor"
+    ],
+    "responseText": "Advisor: MS. MAHAM NOOR\nDepartment: SE\nAvailable Slots: 5\nDomains: Software Development, WAD, MAD, Robotics\nEmail: maham.noor@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "deep learning",
+      "mubashra",
+      "data science",
+      "mubbashraanwar",
+      "supervisor",
+      "anwar"
+    ],
+    "responseText": "Advisor: MS. MUBASHRA ANWAR\nDepartment: SE\nAvailable Slots: 5\nDomains: Research, AI, ML, Data Science, Deep Learning\nEmail: mubbashra.anwar@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "siddiqui",
+      "advisor",
+      "mad",
+      "khalid",
+      "supervisor",
+      "nabeelakhalid",
+      "nabeela",
+      "software testing and quality assurance",
+      "wad"
+    ],
+    "responseText": "Advisor: MS. NABEELA KHALID  SIDDIQUI\nDepartment: SE\nAvailable Slots: 5\nDomains: WAD, MAD, DB, Software Testing and Quality Assurance\nEmail: nabeela.khalid@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "maryam",
+      "project management",
+      "advisor",
+      "ridamaryam",
+      "rida",
+      "supervisor",
+      "risk management"
+    ],
+    "responseText": "Advisor: MS. RIDA MARYAM\nDepartment: SE\nAvailable Slots: 5\nDomains: Project Management, Risk Management\nEmail: rida.maryam@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "software  engineering",
+      "advisor",
+      "rubabjavaid",
+      "software development",
+      "rubab",
+      "supervisor",
+      "javaid",
+      "uml",
+      "wad"
+    ],
+    "responseText": "Advisor: MS. RUBAB JAVAID\nDepartment: SE\nAvailable Slots: 5\nDomains: Software Development, WAD, Research, AI, UML, Software  Engineering, DB\nEmail: rubabjavaid@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "zia",
+      "research",
+      "saherzia",
+      "advisor",
+      "mad",
+      "saher",
+      "supervisor"
+    ],
+    "responseText": "Advisor: MS. SAHER ZIA\nDepartment: SE\nAvailable Slots: 5\nDomains: MAD, Research, DB\nEmail: saher.zia@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "sdn",
+      "sarahjaved",
+      "sarah",
+      "cyber security",
+      "supervisor",
+      "javaid"
+    ],
+    "responseText": "Advisor: MS. SARAH JAVAID\nDepartment: SE\nAvailable Slots: 5\nDomains: Research, Cyber Security, SDN\nEmail: sarahjaved@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "sidra",
+      "noureen",
+      "advisor",
+      "sidranoureen",
+      "software development",
+      "supervisor"
+    ],
+    "responseText": "Advisor: MS. SIDRA NOUREEN\nDepartment: SE\nAvailable Slots: 5\nDomains: Software Development, AI\nEmail: sidra.noureen@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "mad",
+      "iot",
+      "ushna",
+      "cyber security",
+      "khalil",
+      "supervisor",
+      "ushnakhalil"
+    ],
+    "responseText": "Advisor: MS. USHNA KHALIL\nDepartment: SE\nAvailable Slots: 5\nDomains: MAD, Research, Cyber Security, IOT\nEmail: ushna.khalil@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "wishalarshad",
+      "supervisor",
+      "arshad",
+      "ipcomputer vision",
+      "wishal"
+    ],
+    "responseText": "Advisor: MS. WISHAL ARSHAD\nDepartment: SE\nAvailable Slots: 5\nDomains: IP/Computer Vision\nEmail: wishal.arshad@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "awais",
+      "advisor",
+      "mad",
+      "zupashawais",
+      "robotics",
+      "ipcomputer vision",
+      "supervisor",
+      "zupash"
+    ],
+    "responseText": "Advisor: MS. ZUPASH AWAIS\nDepartment: SE\nAvailable Slots: 5\nDomains: MAD, GD, Research, Robotics, AI, IP/Computer Vision\nEmail: zupash.awais@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "sentimental analysis",
+      "drnaveedhussain",
+      "advisor",
+      "data mining",
+      "naveed",
+      "supervisor",
+      "hussain"
+    ],
+    "responseText": "Advisor: DR. NAVEED HUSSAIN\nDepartment: ACT\nAvailable Slots: 5\nDomains: Research, DB, Data Mining, ML, Sentimental Analysis\nEmail: Dr.NaveedHussain@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "rabbiaalamdar",
+      "rabbia",
+      "software development",
+      "alamdar",
+      "supervisor",
+      "wad"
+    ],
+    "responseText": "Advisor: DR. RABBIA ALAMDAR\nDepartment: ACT\nAvailable Slots: 5\nDomains: Software Development, WAD, Research, AI\nEmail: Rabbia.Alamdar@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "suleman",
+      "advisor",
+      "data sciences",
+      "athersuleman",
+      "supervisor",
+      "hardware",
+      "ather"
+    ],
+    "responseText": "Advisor: MR. ATHER SULEMAN\nDepartment: ACT\nAvailable Slots: 5\nDomains: Hardware, Research, DB, AI, ML, Data Sciences\nEmail: ather.suleman@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "mobile forensics",
+      "digital forensics audit",
+      "computer forensics",
+      "advisor",
+      "ali",
+      "farazali",
+      "supervisor",
+      "hardware",
+      "faraz"
+    ],
+    "responseText": "Advisor: MR. FARAZ ALI\nDepartment: ACT\nAvailable Slots: 5\nDomains: Hardware, Research, Computer Forensics, Mobile Forensics,  Digital Forensics Audit\nEmail: FarazAli@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "multiagent systems",
+      "hassan",
+      "advisor",
+      "supervisor",
+      "jawad",
+      "formal methods",
+      "jawadhassan"
+    ],
+    "responseText": "Advisor: MR. JAWAD HASSAN\nDepartment: ACT\nAvailable Slots: 5\nDomains: Research, DB, Formal Methods, Multi-Agent Systems\nEmail: jawad.hassan@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "robotics",
+      "embedded system",
+      "iot",
+      "hardware",
+      "cloud  computing",
+      "supervisor",
+      "nasir",
+      "yasin",
+      "yasinnasir"
+    ],
+    "responseText": "Advisor: MR. M. YASIN NASIR\nDepartment: ACT\nAvailable Slots: 5\nDomains: Hardware, Embedded System, Robotics, AI, IOT, Cloud  Computing\nEmail: yasin.nasir@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "iot security",
+      "advisor",
+      "embedded system",
+      "hardware",
+      "babarhameed",
+      "hameed",
+      "sheikh",
+      "supervisor",
+      "babar"
+    ],
+    "responseText": "Advisor: MR. SHEIKH BABAR HAMEED\nDepartment: ACT\nAvailable Slots: 5\nDomains: Hardware, Research, Embedded System, AI, IOT Security\nEmail: babar.hameed@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "syed",
+      "raza",
+      "iot",
+      "cyber security",
+      "shirazi",
+      "supervisor",
+      "atirraza",
+      "ipcomputer vision",
+      "atir",
+      "federated learning"
+    ],
+    "responseText": "Advisor: MR. SYED ATIR RAZA SHIRAZI\nDepartment: ACT\nAvailable Slots: 5\nDomains: Research, IP/Computer Vision, AI, IOT, Cyber Security,  Federated Learning\nEmail: atir.raza@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "umarrana",
+      "advisor",
+      "mad",
+      "rana",
+      "supervisor",
+      "wad",
+      "umar"
+    ],
+    "responseText": "Advisor: MR. UMAR RANA\nDepartment: ACT\nAvailable Slots: 5\nDomains: WAD, MAD, AI\nEmail: umarrana@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "mad",
+      "waqas",
+      "waqasali",
+      "ali",
+      "software development",
+      "ipcomputer vision",
+      "supervisor",
+      "wad"
+    ],
+    "responseText": "Advisor: MR. WAQAS ALI\nDepartment: ACT\nAvailable Slots: 5\nDomains: Software Development, WAD, MAD, IP/Computer Vision, AI\nEmail: Waqas.Ali@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "research",
+      "advisor",
+      "mad",
+      "hussain",
+      "chuhan",
+      "data analytics",
+      "zishanhussain",
+      "supervisor",
+      "zishan",
+      "wad"
+    ],
+    "responseText": "Advisor: MR. ZISHAN HUSSAIN CHUHAN\nDepartment: ACT\nAvailable Slots: 5\nDomains: WAD, MAD, Research, AI, ML, Data Analytics\nEmail: Zishan.Hussain@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "iqra",
+      "advisor",
+      "iqratariq01",
+      "mad",
+      "tariq",
+      "supervisor",
+      "wad"
+    ],
+    "responseText": "Advisor: MS. IQRA TARIQ\nDepartment: ACT\nAvailable Slots: 5\nDomains: MAD, WAD\nEmail: iqra.tariq01@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "ilyas",
+      "advisor",
+      "sarahilyas",
+      "mad",
+      "sarah",
+      "supervisor",
+      "wad"
+    ],
+    "responseText": "Advisor: MS. SARAH ILYAS\nDepartment: ACT\nAvailable Slots: 5\nDomains: WAD, MAD, DB, AI\nEmail: Sarah.Ilyas@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  },
+  {
+    "keywords": [
+      "advisor",
+      "sumrafayyaz",
+      "fayyaz",
+      "data science",
+      "sumra",
+      "supervisor"
+    ],
+    "responseText": "Advisor: MS. SUMRA FAYYAZ\nDepartment: ACT\nAvailable Slots: 5\nDomains: Data Science, ML\nEmail: sumra.fayyaz@ucp.edu.pk\n\nTo apply, contact this advisor directly via email or visit them during office hours.",
+    "pdfUrl": "/Advisor Workload For Spring 2026.pdf"
+  }
+
+  ,
   {
     keywords: ["retinawise", "eye disease", "oct diagnosis", "blindness", "medical ai"],
     responseText: "Project: RATINAWISE: SMART OCT DIAGNOSIS & SPECIALIST PORTAL\nAdvisor: Ms. Sumra Fayyaz\nStatus: In Process of Completion\nDescription: A multimodal AI system that integrates fundus imaging and OCT scans to detect eye diseases like diabetic retinopathy and glaucoma in early stages.",
