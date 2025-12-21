@@ -12,7 +12,7 @@ const Task = require("../models/Task");
  * CREATE PROJECT
  * Creates a new project and automatically adds requesting advisor as creator
  * Optionally adds initial students
- * 
+ *
  * @param {Object} req - Express request object
  * @param {string} req.body.name - Project name
  * @param {string} req.body.description - Project description
@@ -41,7 +41,7 @@ exports.createProject = async (req, res) => {
  * ADD STUDENT TO PROJECT
  * Enrolls an existing student in a project
  * Only allows advisor assigned to project to modify it
- * 
+ *
  * @param {Object} req - Express request object
  * @param {string} req.body.projectId - Project ID
  * @param {string} req.body.studentId - Student ID to add
@@ -75,7 +75,7 @@ exports.addStudentToProject = async (req, res) => {
  * GET ADVISOR'S PROJECTS
  * Retrieves all projects where advisor is assigned
  * Includes student and advisor details
- * 
+ *
  * @param {Object} req - Express request object
  * @param {Object} res - Express response object
  */
@@ -94,7 +94,7 @@ exports.getAdvisorProjects = async (req, res) => {
  * DELETE PROJECT
  * Deletes project and all related data (tasks, submissions, discussions)
  * Only advisor who owns the project can delete it
- * 
+ *
  * @param {Object} req - Express request object
  * @param {string} req.params.projectId - Project ID to delete
  * @param {Object} res - Express response object
@@ -108,7 +108,9 @@ exports.deleteProject = async (req, res) => {
 
     // Check if advisor owns this project
     if (!project.advisors.includes(req.user._id)) {
-      return res.status(403).json({ message: "Not authorized to delete this project" });
+      return res
+        .status(403)
+        .json({ message: "Not authorized to delete this project" });
     }
 
     // Delete all related data
@@ -133,7 +135,7 @@ exports.deleteProject = async (req, res) => {
 /**
  * GET ALL STUDENTS
  * Retrieves list of all students for enrollment in projects
- * 
+ *
  * @param {Object} req - Express request object
  * @param {Object} res - Express response object
  */
@@ -150,7 +152,7 @@ exports.getAllStudents = async (req, res) => {
  * GET PROJECT TASKS
  * Retrieves all tasks for a specific project
  * Only advisor assigned to project can view
- * 
+ *
  * @param {Object} req - Express request object
  * @param {string} req.params.projectId - Project ID
  * @param {Object} res - Express response object
@@ -159,8 +161,14 @@ exports.getAdvisorProjectTasks = async (req, res) => {
   const { projectId } = req.params;
   try {
     // Verify advisor is assigned to project
-    const project = await Project.findOne({ _id: projectId, advisors: req.user._id });
-    if (!project) return res.status(403).json({ message: "Not authorized for this project" });
+    const project = await Project.findOne({
+      _id: projectId,
+      advisors: req.user._id,
+    });
+    if (!project)
+      return res
+        .status(403)
+        .json({ message: "Not authorized for this project" });
 
     const tasks = await Task.find({ projectId });
     res.json(tasks);
@@ -173,7 +181,7 @@ exports.getAdvisorProjectTasks = async (req, res) => {
  * GET TASK SUBMISSIONS
  * Retrieves all submissions for a specific task
  * Shows which students submitted and their status
- * 
+ *
  * @param {Object} req - Express request object
  * @param {string} req.params.taskId - Task ID
  * @param {Object} res - Express response object
@@ -185,10 +193,15 @@ exports.getTaskSubmissions = async (req, res) => {
     if (!task) return res.status(404).json({ message: "Task not found" });
 
     // Ensure advisor is in the project
-    const isAdvisor = task.projectId.advisors.some(a => a.toString() === req.user._id.toString());
+    const isAdvisor = task.projectId.advisors.some(
+      (a) => a.toString() === req.user._id.toString()
+    );
     if (!isAdvisor) return res.status(403).json({ message: "Not authorized" });
 
-    const submissions = await Submission.find({ taskId }).populate("studentId", "name email");
+    const submissions = await Submission.find({ taskId }).populate(
+      "studentId",
+      "name email"
+    );
     res.json(submissions);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -199,7 +212,7 @@ exports.getTaskSubmissions = async (req, res) => {
  * UPDATE TASK
  * Updates task details (name, instructions)
  * Only advisor who created task can update
- * 
+ *
  * @param {Object} req - Express request object
  * @param {string} req.params.taskId - Task ID
  * @param {string} req.body.name - Updated task name
@@ -232,7 +245,7 @@ exports.updateTask = async (req, res) => {
  * DELETE TASK
  * Removes a task and all its submissions
  * Only advisor who created task can delete
- * 
+ *
  * @param {Object} req - Express request object
  * @param {string} req.params.taskId - Task ID to delete
  * @param {Object} res - Express response object
@@ -258,7 +271,7 @@ exports.deleteTask = async (req, res) => {
  * GRADE SUBMISSION
  * Assigns marks to a student's submission
  * Updates submission status to "evaluated"
- * 
+ *
  * @param {Object} req - Express request object
  * @param {string} req.params.submissionId - Submission ID to grade
  * @param {number} req.body.marks - Marks to assign
@@ -275,7 +288,8 @@ exports.gradeSubmission = async (req, res) => {
       populate: { path: "projectId", select: "advisors" },
     });
 
-    if (!submission) return res.status(404).json({ message: "Submission not found" });
+    if (!submission)
+      return res.status(404).json({ message: "Submission not found" });
 
     // Ensure advisor has access to this submission
     const isAdvisor = submission.taskId.projectId.advisors.some(
@@ -298,7 +312,7 @@ exports.gradeSubmission = async (req, res) => {
  * COMPLETE TASK
  * Marks a task as completed
  * Indicates all work on the task is finished
- * 
+ *
  * @param {Object} req - Express request object
  * @param {string} req.params.taskId - Task ID to complete
  * @param {Object} res - Express response object
@@ -325,8 +339,14 @@ exports.completeTask = async (req, res) => {
 exports.getAdvisorProjectTasks = async (req, res) => {
   const { projectId } = req.params;
   try {
-    const project = await Project.findOne({ _id: projectId, advisors: req.user._id });
-    if (!project) return res.status(403).json({ message: "Not authorized for this project" });
+    const project = await Project.findOne({
+      _id: projectId,
+      advisors: req.user._id,
+    });
+    if (!project)
+      return res
+        .status(403)
+        .json({ message: "Not authorized for this project" });
 
     const tasks = await Task.find({ projectId });
     res.json(tasks);
@@ -335,7 +355,6 @@ exports.getAdvisorProjectTasks = async (req, res) => {
   }
 };
 
-
 exports.getTaskSubmissions = async (req, res) => {
   const { taskId } = req.params;
   try {
@@ -343,16 +362,20 @@ exports.getTaskSubmissions = async (req, res) => {
     if (!task) return res.status(404).json({ message: "Task not found" });
 
     // Ensure advisor is in the project
-    const isAdvisor = task.projectId.advisors.some(a => a.toString() === req.user._id.toString());
+    const isAdvisor = task.projectId.advisors.some(
+      (a) => a.toString() === req.user._id.toString()
+    );
     if (!isAdvisor) return res.status(403).json({ message: "Not authorized" });
 
-    const submissions = await Submission.find({ taskId }).populate("studentId", "name email");
+    const submissions = await Submission.find({ taskId }).populate(
+      "studentId",
+      "name email"
+    );
     res.json(submissions);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
 };
-
 
 // Update task
 exports.updateTask = async (req, res) => {
@@ -406,7 +429,8 @@ exports.gradeSubmission = async (req, res) => {
       populate: { path: "projectId", select: "advisors" },
     });
 
-    if (!submission) return res.status(404).json({ message: "Submission not found" });
+    if (!submission)
+      return res.status(404).json({ message: "Submission not found" });
 
     // Ensure advisor has access to this submission
     const isAdvisor = submission.taskId.projectId.advisors.some(
