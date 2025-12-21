@@ -9,7 +9,7 @@
 }
 
 .auth-container::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -24,7 +24,7 @@
 }
 
 .auth-container::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
