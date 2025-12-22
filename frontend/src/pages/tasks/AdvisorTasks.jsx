@@ -25,6 +25,7 @@ const AdvisorTasks = () => {
     instructions: '',
     projectId: '',
     file: null,
+    marks: 0,
   });
 
   useEffect(() => {
@@ -108,6 +109,7 @@ const AdvisorTasks = () => {
       data.append('name', formData.name);
       data.append('instructions', formData.instructions);
       data.append('projectId', formData.projectId);
+      data.append('marks', formData.marks);
       if (formData.file) {
         data.append('file', formData.file);
       }
@@ -115,7 +117,7 @@ const AdvisorTasks = () => {
       await advisorAPI.createTask(data);
       await fetchData();
       setShowCreateModal(false);
-      setFormData({ name: '', instructions: '', projectId: '', file: null });
+      setFormData({ name: '', instructions: '', projectId: '', file: null, marks: 0 });
     } catch (error) {
       console.error('Error creating task:', error);
       alert(error.response?.data?.message || 'Failed to create task');
@@ -257,6 +259,7 @@ const AdvisorTasks = () => {
               <th>Task</th>
               <th>Assigned To</th>
               <th>Due Date</th>
+              <th>Marks</th>
               <th>Status</th>
               <th>Actions</th>
             </tr>
@@ -264,7 +267,7 @@ const AdvisorTasks = () => {
           <tbody>
             {filteredTasks.length === 0 ? (
               <tr>
-                <td colSpan="5" className="no-data">No tasks found.</td>
+                <td colSpan="6" className="no-data">No tasks found.</td>
               </tr>
             ) : (
               filteredTasks.map((task) => (
@@ -272,6 +275,7 @@ const AdvisorTasks = () => {
                   <td className="task-name">{task.name}</td>
                   <td className="assigned-to">{getAssignedTo(task)}</td>
                   <td className="due-date">{formatDate(task.dueDate || task.createdAt)}</td>
+                  <td className="marks-cell">{task.marks || 0}</td>
                   <td>
                     <StatusBadge status={getTaskStatus(task)} />
                   </td>
@@ -353,6 +357,17 @@ const AdvisorTasks = () => {
                     onChange={handleInputChange}
                     placeholder="Enter task instructions"
                     rows={4}
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Marks</label>
+                  <input
+                    type="number"
+                    name="marks"
+                    value={formData.marks}
+                    onChange={handleInputChange}
+                    placeholder="Enter total marks"
+                    min="0"
                   />
                 </div>
                 <div className="form-group">

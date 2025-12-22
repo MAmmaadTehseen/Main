@@ -36,6 +36,9 @@ const taskSchema = new mongoose.Schema(
 
     // Flag to mark task as completed (all evaluations done)
     isCompleted: { type: Boolean, default: false },
+
+    // Total marks for this task
+    marks: { type: Number, default: 0 },
   },
   { timestamps: true }
 ); // Automatically add createdAt and updatedAt timestamps
