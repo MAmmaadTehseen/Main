@@ -1,17 +1,24 @@
-import { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
-import { advisorAPI, SERVER_URL } from '../../services/api';
-import Card from '../../components/common/Card';
-import StatusBadge from '../../components/common/StatusBadge';
-import { MdVisibility, MdEdit, MdAdd, MdSearch, MdClose, MdDelete } from 'react-icons/md';
-import './AdvisorTasks.css';
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
+import { advisorAPI, SERVER_URL } from "../../services/api";
+import Card from "../../components/common/Card";
+import StatusBadge from "../../components/common/StatusBadge";
+import {
+  MdVisibility,
+  MdEdit,
+  MdAdd,
+  MdSearch,
+  MdClose,
+  MdDelete,
+} from "react-icons/md";
+import "./AdvisorTasks.css";
 
 const AdvisorTasks = () => {
   const [searchParams] = useSearchParams();
   const [tasks, setTasks] = useState([]);
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [showViewModal, setShowViewModal] = useState(false);
   const [selectedTask, setSelectedTask] = useState(null);
@@ -19,17 +26,17 @@ const AdvisorTasks = () => {
   const [creating, setCreating] = useState(false);
   const [grading, setGrading] = useState(null);
   const [filterProjectId, setFilterProjectId] = useState(null);
-  const [filterProjectName, setFilterProjectName] = useState('');
+  const [filterProjectName, setFilterProjectName] = useState("");
   const [formData, setFormData] = useState({
-    name: '',
-    instructions: '',
-    projectId: '',
+    name: "",
+    instructions: "",
+    projectId: "",
     file: null,
     marks: 0,
   });
 
   useEffect(() => {
-    const projectId = searchParams.get('project');
+    const projectId = searchParams.get("project");
     setFilterProjectId(projectId);
     fetchData(projectId);
   }, [searchParams]);
@@ -42,31 +49,33 @@ const AdvisorTasks = () => {
 
       // If filtering by project, get the project name
       if (filterProjectId) {
-        const filteredProject = projectsData.find(p => p._id === filterProjectId);
+        const filteredProject = projectsData.find(
+          (p) => p._id === filterProjectId
+        );
         if (filteredProject) {
           setFilterProjectName(filteredProject.name);
         }
       } else {
-        setFilterProjectName('');
+        setFilterProjectName("");
       }
 
       // Fetch tasks for projects (filtered or all)
       const projectsToFetch = filterProjectId
-        ? projectsData.filter(p => p._id === filterProjectId)
+        ? projectsData.filter((p) => p._id === filterProjectId)
         : projectsData;
 
       const allTasks = [];
       for (const project of projectsToFetch) {
         try {
           const tasksRes = await advisorAPI.getProjectTasks(project._id);
-          const projectTasks = tasksRes.data.map(task => ({
+          const projectTasks = tasksRes.data.map((task) => ({
             ...task,
             projectName: project.name,
             students: project.students,
           }));
           allTasks.push(...projectTasks);
         } catch (err) {
-          console.error('Error fetching tasks:', err);
+          console.error("Error fetching tasks:", err);
         }
       }
 
@@ -74,9 +83,13 @@ const AdvisorTasks = () => {
       const tasksWithSubmissions = await Promise.all(
         allTasks.map(async (task) => {
           try {
-            const submissionsRes = await advisorAPI.getTaskSubmissions(task._id);
+            const submissionsRes = await advisorAPI.getTaskSubmissions(
+              task._id
+            );
             const submissions = submissionsRes.data;
-            const evaluated = submissions.filter(s => s.status === 'evaluated').length;
+            const evaluated = submissions.filter(
+              (s) => s.status === "evaluated"
+            ).length;
             return {
               ...task,
               submissionCount: submissions.length,
@@ -90,7 +103,7 @@ const AdvisorTasks = () => {
 
       setTasks(tasksWithSubmissions);
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error("Error fetching data:", error);
     } finally {
       setLoading(false);
     }
@@ -99,28 +112,34 @@ const AdvisorTasks = () => {
   const handleCreateTask = async (e) => {
     e.preventDefault();
     if (!formData.name || !formData.projectId) {
-      alert('Please fill in all required fields');
+      alert("Please fill in all required fields");
       return;
     }
 
     setCreating(true);
     try {
       const data = new FormData();
-      data.append('name', formData.name);
-      data.append('instructions', formData.instructions);
-      data.append('projectId', formData.projectId);
-      data.append('marks', formData.marks);
+      data.append("name", formData.name);
+      data.append("instructions", formData.instructions);
+      data.append("projectId", formData.projectId);
+      data.append("marks", formData.marks);
       if (formData.file) {
-        data.append('file', formData.file);
+        data.append("file", formData.file);
       }
 
       await advisorAPI.createTask(data);
       await fetchData();
       setShowCreateModal(false);
-      setFormData({ name: '', instructions: '', projectId: '', file: null, marks: 0 });
+      setFormData({
+        name: "",
+        instructions: "",
+        projectId: "",
+        file: null,
+        marks: 0,
+      });
     } catch (error) {
-      console.error('Error creating task:', error);
-      alert(error.response?.data?.message || 'Failed to create task');
+      console.error("Error creating task:", error);
+      alert(error.response?.data?.message || "Failed to create task");
     } finally {
       setCreating(false);
     }
@@ -128,29 +147,33 @@ const AdvisorTasks = () => {
 
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
-    if (name === 'file') {
-      setFormData(prev => ({ ...prev, file: files[0] }));
+    if (name === "file") {
+      setFormData((prev) => ({ ...prev, file: files[0] }));
     } else {
-      setFormData(prev => ({ ...prev, [name]: value }));
+      setFormData((prev) => ({ ...prev, [name]: value }));
     }
   };
 
   const formatDate = (dateString) => {
-    if (!dateString) return 'N/A';
+    if (!dateString) return "N/A";
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', {
-      month: 'long',
-      day: 'numeric',
-      year: 'numeric',
+    return date.toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
     });
   };
 
   const getTaskStatus = (task) => {
-    if (task.isCompleted) return 'Completed';
-    if (task.isDone) return 'In Progress';
-    if (task.evaluatedCount === task.students?.length && task.students?.length > 0) return 'Completed';
-    if (task.submissionCount > 0) return 'In Progress';
-    return 'Pending';
+    if (task.isCompleted) return "Completed";
+    if (task.isDone) return "In Progress";
+    if (
+      task.evaluatedCount === task.students?.length &&
+      task.students?.length > 0
+    )
+      return "Completed";
+    if (task.submissionCount > 0) return "In Progress";
+    return "Pending";
   };
 
   const getAssignedTo = (task) => {
@@ -160,10 +183,10 @@ const AdvisorTasks = () => {
       }
       return `${task.students[0].name} +${task.students.length - 1}`;
     }
-    return 'No students';
+    return "No students";
   };
 
-  const filteredTasks = tasks.filter(task => {
+  const filteredTasks = tasks.filter((task) => {
     const searchLower = searchTerm.toLowerCase();
     return (
       task.name?.toLowerCase().includes(searchLower) ||
@@ -177,15 +200,15 @@ const AdvisorTasks = () => {
       const res = await advisorAPI.getTaskSubmissions(task._id);
       setSubmissions(res.data);
     } catch (error) {
-      console.error('Error fetching submissions:', error);
+      console.error("Error fetching submissions:", error);
       setSubmissions([]);
     }
     setShowViewModal(true);
   };
 
   const handleGradeSubmission = async (submissionId, marks) => {
-    if (marks === '' || marks === null) {
-      alert('Please enter marks');
+    if (marks === "" || marks === null) {
+      alert("Please enter marks");
       return;
     }
 
@@ -197,15 +220,19 @@ const AdvisorTasks = () => {
       setSubmissions(res.data);
       await fetchData(filterProjectId);
     } catch (error) {
-      console.error('Error grading submission:', error);
-      alert(error.response?.data?.message || 'Failed to grade submission');
+      console.error("Error grading submission:", error);
+      alert(error.response?.data?.message || "Failed to grade submission");
     } finally {
       setGrading(null);
     }
   };
 
   const handleDeleteTask = async (taskId, taskName) => {
-    if (!window.confirm(`Are you sure you want to delete "${taskName}"? This will also delete all submissions.`)) {
+    if (
+      !window.confirm(
+        `Are you sure you want to delete "${taskName}"? This will also delete all submissions.`
+      )
+    ) {
       return;
     }
 
@@ -213,8 +240,8 @@ const AdvisorTasks = () => {
       await advisorAPI.deleteTask(taskId);
       await fetchData();
     } catch (error) {
-      console.error('Error deleting task:', error);
-      alert(error.response?.data?.message || 'Failed to delete task');
+      console.error("Error deleting task:", error);
+      alert(error.response?.data?.message || "Failed to delete task");
     }
   };
 
@@ -223,8 +250,8 @@ const AdvisorTasks = () => {
       await advisorAPI.completeTask(taskId);
       await fetchData();
     } catch (error) {
-      console.error('Error completing task:', error);
-      alert(error.response?.data?.message || 'Failed to mark task as complete');
+      console.error("Error completing task:", error);
+      alert(error.response?.data?.message || "Failed to mark task as complete");
     }
   };
 
@@ -235,7 +262,9 @@ const AdvisorTasks = () => {
   return (
     <div className="advisor-tasks-page">
       <div className="page-header">
-        <h1 className="page-title">Tasks{filterProjectName && ` - ${filterProjectName}`}</h1>
+        <h1 className="page-title">
+          Tasks{filterProjectName && ` - ${filterProjectName}`}
+        </h1>
         <div className="search-box">
           <MdSearch className="search-icon" />
           <input
@@ -267,14 +296,18 @@ const AdvisorTasks = () => {
           <tbody>
             {filteredTasks.length === 0 ? (
               <tr>
-                <td colSpan="6" className="no-data">No tasks found.</td>
+                <td colSpan="6" className="no-data">
+                  No tasks found.
+                </td>
               </tr>
             ) : (
               filteredTasks.map((task) => (
                 <tr key={task._id}>
                   <td className="task-name">{task.name}</td>
                   <td className="assigned-to">{getAssignedTo(task)}</td>
-                  <td className="due-date">{formatDate(task.dueDate || task.createdAt)}</td>
+                  <td className="due-date">
+                    {formatDate(task.dueDate || task.createdAt)}
+                  </td>
                   <td className="marks-cell">{task.marks || 0}</td>
                   <td>
                     <StatusBadge status={getTaskStatus(task)} />
@@ -291,7 +324,7 @@ const AdvisorTasks = () => {
                       className="action-btn edit"
                       title="Mark Complete"
                       onClick={() => handleCompleteTask(task._id)}
-                      disabled={getTaskStatus(task) === 'Completed'}
+                      disabled={getTaskStatus(task) === "Completed"}
                     >
                       <MdEdit />
                     </button>
@@ -312,11 +345,17 @@ const AdvisorTasks = () => {
 
       {/* Create Task Modal */}
       {showCreateModal && (
-        <div className="modal-overlay" onClick={() => setShowCreateModal(false)}>
+        <div
+          className="modal-overlay"
+          onClick={() => setShowCreateModal(false)}
+        >
           <div className="modal" onClick={(e) => e.stopPropagation()}>
             <div className="modal-header">
               <h2>Create New Task</h2>
-              <button className="close-btn" onClick={() => setShowCreateModal(false)}>
+              <button
+                className="close-btn"
+                onClick={() => setShowCreateModal(false)}
+              >
                 <MdClose />
               </button>
             </div>
@@ -342,7 +381,7 @@ const AdvisorTasks = () => {
                     required
                   >
                     <option value="">Select a project</option>
-                    {projects.map(project => (
+                    {projects.map((project) => (
                       <option key={project._id} value={project._id}>
                         {project.name}
                       </option>
@@ -381,11 +420,19 @@ const AdvisorTasks = () => {
                 </div>
               </div>
               <div className="modal-footer">
-                <button type="button" className="cancel-btn" onClick={() => setShowCreateModal(false)}>
+                <button
+                  type="button"
+                  className="cancel-btn"
+                  onClick={() => setShowCreateModal(false)}
+                >
                   Cancel
                 </button>
-                <button type="submit" className="submit-btn" disabled={creating}>
-                  {creating ? 'Creating...' : 'Create Task'}
+                <button
+                  type="submit"
+                  className="submit-btn"
+                  disabled={creating}
+                >
+                  {creating ? "Creating..." : "Create Task"}
                 </button>
               </div>
             </form>
@@ -396,30 +443,44 @@ const AdvisorTasks = () => {
       {/* View Submissions Modal */}
       {showViewModal && selectedTask && (
         <div className="modal-overlay" onClick={() => setShowViewModal(false)}>
-          <div className="modal submissions-modal" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="modal submissions-modal"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="modal-header">
               <h2>Submissions for: {selectedTask.name}</h2>
-              <button className="close-btn" onClick={() => setShowViewModal(false)}>
+              <button
+                className="close-btn"
+                onClick={() => setShowViewModal(false)}
+              >
                 <MdClose />
               </button>
             </div>
             <div className="modal-body">
               {submissions.length === 0 ? (
-                <p style={{ textAlign: 'center', color: 'var(--text-light)' }}>No submissions yet.</p>
+                <p style={{ textAlign: "center", color: "var(--text-light)" }}>
+                  No submissions yet.
+                </p>
               ) : (
                 <div className="submissions-list">
                   {submissions.map((sub) => (
                     <div key={sub._id} className="submission-item">
                       <div className="submission-header">
                         <div className="student-name">
-                          {sub.studentId?.name || 'Unknown Student'}
+                          {sub.studentId?.name || "Unknown Student"}
                         </div>
-                        <div className={`submission-status ${sub.status === 'evaluated' ? 'graded' : 'pending'}`}>
-                          {sub.status === 'evaluated' ? 'Graded' : 'Pending'}
+                        <div
+                          className={`submission-status ${
+                            sub.status === "evaluated" ? "graded" : "pending"
+                          }`}
+                        >
+                          {sub.status === "evaluated" ? "Graded" : "Pending"}
                         </div>
                       </div>
                       <div className="submission-details">
-                        <span>Submitted: {new Date(sub.createdAt).toLocaleString()}</span>
+                        <span>
+                          Submitted: {new Date(sub.createdAt).toLocaleString()}
+                        </span>
                         {sub.fileUrl && (
                           <a
                             href={`${SERVER_URL}${sub.fileUrl}`}
@@ -437,19 +498,25 @@ const AdvisorTasks = () => {
                           type="number"
                           min="0"
                           max="100"
-                          defaultValue={sub.marks ?? ''}
+                          defaultValue={sub.marks ?? ""}
                           id={`marks-${sub._id}`}
                           disabled={grading === sub._id}
                         />
                         <button
                           className="grade-btn"
                           onClick={() => {
-                            const input = document.getElementById(`marks-${sub._id}`);
+                            const input = document.getElementById(
+                              `marks-${sub._id}`
+                            );
                             handleGradeSubmission(sub._id, input.value);
                           }}
                           disabled={grading === sub._id}
                         >
-                          {grading === sub._id ? 'Saving...' : (sub.status === 'evaluated' ? 'Update' : 'Grade')}
+                          {grading === sub._id
+                            ? "Saving..."
+                            : sub.status === "evaluated"
+                            ? "Update"
+                            : "Grade"}
                         </button>
                       </div>
                     </div>
@@ -458,7 +525,10 @@ const AdvisorTasks = () => {
               )}
             </div>
             <div className="modal-footer">
-              <button className="cancel-btn" onClick={() => setShowViewModal(false)}>
+              <button
+                className="cancel-btn"
+                onClick={() => setShowViewModal(false)}
+              >
                 Close
               </button>
             </div>
