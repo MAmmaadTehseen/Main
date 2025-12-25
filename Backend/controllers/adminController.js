@@ -106,8 +106,32 @@ exports.getAllUsers = async (req, res) => {
   try {
     const { role } = req.query; // optional filter ?role=student
     const filter = role ? { role } : {};
-    const users = await User.find(filter).select("-password");
-    res.json(users);
+
+    // Get all users (as plain objects)
+    const users = await User.find(filter).select("-password").lean();
+
+    // Get all projects to map relationships
+    const projects = await Project.find().select(
+      "name advisors students"
+    );
+
+    // Attach projects to each user
+    const usersWithProjects = users.map((user) => {
+      const userProjects = projects
+        .filter(
+          (p) =>
+            p.advisors.some((a) => a.toString() === user._id.toString()) ||
+            p.students.some((s) => s.toString() === user._id.toString())
+        )
+        .map((p) => p.name);
+
+      return {
+        ...user,
+        projects: userProjects,
+      };
+    });
+
+    res.json(usersWithProjects);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
