@@ -33,7 +33,10 @@ const Discussion = () => {
   const { user } = useAuth();
 
   // Get URL search parameters (project ID if provided)
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  // State for projects list
+  const [projects, setProjects] = useState([]);
 
   // State for messages list
   const [messages, setMessages] = useState([]);
@@ -79,18 +82,28 @@ const Discussion = () => {
           projectsRes = await studentAPI.getProjects();
         }
 
-        const projects = projectsRes.data;
-        if (projects.length > 0) {
+        const projectsData = projectsRes.data;
+        setProjects(projectsData);
+
+        if (projectsData.length > 0) {
           // Check for project parameter in URL
           const urlProjectId = searchParams.get("project");
           let selectedProjectId = urlProjectId;
 
           // Verify the project exists in user's projects
-          const selectedProject = projects.find((p) => p._id === urlProjectId);
+          const selectedProject = projectsData.find(
+            (p) => p._id === urlProjectId
+          );
+
           if (!selectedProject) {
             // Default to first project if URL project not found
-            selectedProjectId = projects[0]._id;
-            setProjectName(projects[0].name);
+            selectedProjectId = projectsData[0]._id;
+            setProjectName(projectsData[0].name);
+            // Update URL to reflect default
+            if (!urlProjectId) {
+               // We don't force push to URL here to avoid infinite loop implications if not careful,
+               // but we could. For now just setting state is enough.
+            }
           } else {
             setProjectName(selectedProject.name);
           }
@@ -111,7 +124,7 @@ const Discussion = () => {
     };
 
     fetchProjectAndMessages();
-  }, [user?.role, searchParams]);
+  }, [user?.role, searchParams]); // Keep logic simple: refetch if URL changes.
 
   /**
    * Auto-scroll to bottom whenever messages change
@@ -119,6 +132,11 @@ const Discussion = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  const handleProjectChange = (newProjectId) => {
+    // Update URL which will trigger the useEffect to refetch messages
+    setSearchParams({ project: newProjectId });
+  };
 
   /**
    * Handle sending a new message
@@ -175,10 +193,27 @@ const Discussion = () => {
 
   return (
     <div className="discussion-page">
-      {/* Page title with project name */}
-      <h1 className="page-title">
-        Discussion Board{projectName && ` - ${projectName}`}
-      </h1>
+      {/* Page header with title and selector */}
+      <div className="page-header">
+        <h1 className="page-title">Discussion Board</h1>
+        
+        {/* Project Selector */}
+        {projects.length > 0 && (
+          <div className="project-selector-container">
+            <select
+              value={projectId || ""}
+              onChange={(e) => handleProjectChange(e.target.value)}
+              className="project-select"
+            >
+              {projects.map((p) => (
+                <option key={p._id} value={p._id}>
+                  {p.name}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
+      </div>
 
       {/* Discussion card with messages and input */}
       <Card className="discussion-card">
@@ -186,7 +221,7 @@ const Discussion = () => {
         <div className="messages-container">
           {messages.length === 0 ? (
             <p className="no-messages">
-              No messages yet. Start the conversation!
+              No messages yet. Start the conversation in <strong>{projectName}</strong>!
             </p>
           ) : (
             // Messages list
@@ -211,7 +246,7 @@ const Discussion = () => {
         <form className="message-form" onSubmit={handleSendMessage}>
           <input
             type="text"
-            placeholder="Type your message..."
+            placeholder={`Message in ${projectName}...`}
             value={newMessage}
             onChange={(e) => setNewMessage(e.target.value)}
             disabled={sending || !projectId}

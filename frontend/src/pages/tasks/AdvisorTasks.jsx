@@ -94,6 +94,7 @@ const AdvisorTasks = () => {
               ...task,
               submissionCount: submissions.length,
               evaluatedCount: evaluated,
+              submissionData: submissions,
             };
           } catch {
             return { ...task, submissionCount: 0, evaluatedCount: 0 };
@@ -184,6 +185,49 @@ const AdvisorTasks = () => {
       return `${task.students[0].name} +${task.students.length - 1}`;
     }
     return "No students";
+  };
+
+  const getMarksDisplay = (task) => {
+    // If we have submission data
+    if (task.submissionData?.length > 0) {
+      // Filter for evaluated submissions only
+      const evaluatedSubs = task.submissionData.filter(
+        (s) => s.status === "evaluated" && s.marks !== null
+      );
+
+      if (evaluatedSubs.length > 0) {
+        // If single student (or single evaluation), just show the mark
+        if (evaluatedSubs.length === 1 && task.students?.length === 1) {
+          return (
+            <span style={{ color: "var(--success-color)", fontWeight: "bold" }}>
+              {evaluatedSubs[0].marks}
+            </span>
+          );
+        }
+
+        // If multiple evaluations, show them efficiently
+        return (
+          <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+            {evaluatedSubs.map((sub) => (
+              <span key={sub._id} style={{ fontSize: "12px" }}>
+                <span style={{ fontWeight: "500" }}>
+                  {sub.studentId.name?.split(" ")[0] || "Student"}:
+                </span>{" "}
+                <span style={{ color: "var(--success-color)", fontWeight: "bold" }}>
+                  {sub.marks}
+                </span>
+              </span>
+            ))}
+            {evaluatedSubs.length < task.students?.length && (
+              <span style={{ fontSize: "11px", color: "var(--text-light)" }}>
+                ({evaluatedSubs.length}/{task.students.length} graded)
+              </span>
+            )}
+          </div>
+        );
+      }
+    }
+    return task.marks || 0;
   };
 
   const filteredTasks = tasks.filter((task) => {
@@ -308,7 +352,7 @@ const AdvisorTasks = () => {
                   <td className="due-date">
                     {formatDate(task.dueDate || task.createdAt)}
                   </td>
-                  <td className="marks-cell">{task.marks || 0}</td>
+                  <td className="marks-cell">{getMarksDisplay(task)}</td>
                   <td>
                     <StatusBadge status={getTaskStatus(task)} />
                   </td>
@@ -495,6 +539,7 @@ const AdvisorTasks = () => {
                       <div className="grading-section">
                         <label>Marks:</label>
                         <input
+                          key={`${sub._id}-${sub.marks}`}
                           type="number"
                           min="0"
                           max="100"

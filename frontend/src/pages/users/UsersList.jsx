@@ -81,6 +81,7 @@ const UsersList = () => {
             <tr>
               <th>User Name</th>
               <th>Email</th>
+              <th>Projects</th>
               <th>User Role</th>
               <th>Actions</th>
             </tr>
@@ -95,6 +96,16 @@ const UsersList = () => {
                 <tr key={user._id}>
                   <td className="user-name">{user.name}</td>
                   <td className="user-email">{user.email}</td>
+                  <td className="user-projects">
+                    {user.projects && user.projects.length > 0 ? (
+                      <span title={user.projects.join(", ")}>
+                        {user.projects.slice(0, 2).join(", ")}
+                        {user.projects.length > 2 && "..."}
+                      </span>
+                    ) : (
+                      <span className="text-muted">-</span>
+                    )}
+                  </td>
                   <td className="user-role">{getRoleDisplay(user.role)}</td>
                   <td className="actions-cell">
                     <button className="action-btn view" title="View Details">

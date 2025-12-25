@@ -5,7 +5,7 @@
  */
 
 import { useAuth } from "../../context/AuthContext";
-import { MdAccountCircle, MdMenu } from "react-icons/md";
+import { MdAccountCircle, MdMenu, MdLogout } from "react-icons/md";
 import "./Header.css";
 
 /**
@@ -14,14 +14,15 @@ import "./Header.css";
  * - Menu button (for mobile sidebar toggle)
  * - Current user name/ID
  * - Profile icon
+ * - Logout button
  *
  * @component
  * @param {Object} props - Component props
  * @param {Function} props.onMenuClick - Callback when menu button is clicked
  */
 const Header = ({ onMenuClick }) => {
-  // Get current user from auth context
-  const { user } = useAuth();
+  // Get current user and logout function from auth context
+  const { user, logout } = useAuth();
 
   return (
     <header className="header">
@@ -38,8 +39,11 @@ const Header = ({ onMenuClick }) => {
         </span>
       </div>
 
-      {/* Right side - Profile icon */}
+      {/* Right side - Profile icon and Logout */}
       <div className="header-right">
+        <button className="logout-btn" onClick={logout} title="Logout">
+          <MdLogout />
+        </button>
         <div className="profile-icon">
           <MdAccountCircle />
         </div>
