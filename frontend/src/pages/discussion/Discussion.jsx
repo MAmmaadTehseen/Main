@@ -8,6 +8,14 @@ import { useState, useEffect, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { studentAPI, advisorAPI, discussionAPI } from "../../services/api";
+import {
+  initializeSocket,
+  joinProjectRoom,
+  leaveProjectRoom,
+  onMessageReceived,
+  offMessageReceived,
+  disconnectSocket,
+} from "../../services/socket";
 import Card from "../../components/common/Card";
 import { MdSend } from "react-icons/md";
 import "./Discussion.css";
@@ -70,6 +78,7 @@ const Discussion = () => {
   /**
    * Fetch projects and messages on component mount or when params change
    * Selects first project or URL-specified project
+   * Also initializes socket connection for real-time updates
    */
   useEffect(() => {
     const fetchProjectAndMessages = async () => {
@@ -124,6 +133,14 @@ const Discussion = () => {
     };
 
     fetchProjectAndMessages();
+
+    // Initialize Socket.IO connection
+    const socket = initializeSocket();
+
+    // Cleanup on unmount
+    return () => {
+      offMessageReceived();
+    };
   }, [user?.role, searchParams]); // Keep logic simple: refetch if URL changes.
 
   /**
@@ -132,6 +149,36 @@ const Discussion = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  /**
+   * Join project room and listen for real-time messages
+   * Runs when projectId changes
+   */
+  useEffect(() => {
+    if (!projectId) return;
+
+    console.log(`🔌 Setting up socket for project: ${projectId}`);
+
+    // Join the project room
+    joinProjectRoom(projectId);
+
+    // Listen for incoming messages from socket
+    const handleNewMessage = (message) => {
+      console.log("📨 New message received:", message);
+      console.log("✅ Adding message to state");
+      setMessages((prevMessages) => [...prevMessages, message]);
+    };
+
+    // Register listener (it removes any existing listeners automatically)
+    onMessageReceived(handleNewMessage);
+
+    // Cleanup: leave room and remove listener when switching projects or unmounting
+    return () => {
+      console.log(`🔌 Cleaning up socket for project: ${projectId}`);
+      leaveProjectRoom(projectId);
+      offMessageReceived(handleNewMessage);
+    };
+  }, [projectId]);
 
   const handleProjectChange = (newProjectId) => {
     // Update URL which will trigger the useEffect to refetch messages
@@ -150,13 +197,12 @@ const Discussion = () => {
     setSending(true);
     try {
       // Post message to API
-      await discussionAPI.postMessage(projectId, { message: newMessage });
+      // The backend will broadcast via socket to all users (including us)
+      await discussionAPI.postMessage(projectId, {
+        message: newMessage,
+      });
 
-      // Refresh messages list
-      const messagesRes = await discussionAPI.getMessages(projectId);
-      setMessages(messagesRes.data);
-
-      // Clear input field
+      // Clear input field immediately for better UX
       setNewMessage("");
     } catch (error) {
       console.error("Error sending message:", error);

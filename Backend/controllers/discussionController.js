@@ -60,6 +60,12 @@ exports.postMessage = async (req, res) => {
     // Populate sender info and return
     const populatedMessage = await newMessage.populate("sender", "name role");
 
+    // Emit socket event to notify all users in the project room
+    const io = req.app.get("io");
+    if (io) {
+      io.to(projectId).emit("messageReceived", populatedMessage);
+    }
+
     res.status(201).json(populatedMessage);
   } catch (err) {
     res.status(500).json({ message: err.message });

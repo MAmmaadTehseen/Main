@@ -8,12 +8,26 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const path = require("path");
+const http = require("http");
+const { Server } = require("socket.io");
 
 // Load environment variables from .env file
 dotenv.config();
 
 // Initialize Express application
 const app = express();
+
+// Create HTTP server for Socket.IO
+const server = http.createServer(app);
+
+// Initialize Socket.IO with CORS configuration
+const io = new Server(server, {
+  cors: {
+    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    methods: ["GET", "POST"],
+    credentials: true,
+  },
+});
 
 // ========== MIDDLEWARE SETUP ==========
 // Enable Cross-Origin Resource Sharing (CORS) - allows requests from different domains
@@ -55,6 +69,40 @@ app.use("/api/chatbot", chatbotRoutes);
 app.use("/api/discussions", discussionRoutes);
 app.use("/api/progress", progressRoutes);
 
+// ========== SOCKET.IO EVENT HANDLERS ==========
+// Handle WebSocket connections for real-time discussion updates
+io.on("connection", (socket) => {
+  console.log(`User connected: ${socket.id}`);
+
+  // Join a project-specific discussion room
+  socket.on("joinProject", (projectId) => {
+    socket.join(projectId);
+    console.log(`User ${socket.id} joined project: ${projectId}`);
+  });
+
+  // Leave a project room
+  socket.on("leaveProject", (projectId) => {
+    socket.leave(projectId);
+    console.log(`User ${socket.id} left project: ${projectId}`);
+  });
+
+  // Broadcast new message to all users in the project room
+  socket.on("newMessage", (data) => {
+    const { projectId, message } = data;
+    // Send to all users in the project room except sender
+    socket.to(projectId).emit("messageReceived", message);
+    console.log(`Message sent to project ${projectId}`);
+  });
+
+  // Handle disconnection
+  socket.on("disconnect", () => {
+    console.log(`User disconnected: ${socket.id}`);
+  });
+});
+
+// Make io accessible to routes/controllers
+app.set("io", io);
+
 // ========== ERROR HANDLING ==========
 // Catch any undefined routes and return 404 error
 app.use((req, res) => {
@@ -68,8 +116,10 @@ mongoose
   .then(() => {
     console.log("MongoDB connected");
     const port = process.env.PORT || 5000;
-    app.listen(port, () => {
+    // Use server.listen instead of app.listen for Socket.IO
+    server.listen(port, () => {
       console.log(`Server running on port ${port}`);
+      console.log(`Socket.IO enabled for real-time communication`);
     });
   })
   .catch((err) => console.error("MongoDB connection error:", err));
